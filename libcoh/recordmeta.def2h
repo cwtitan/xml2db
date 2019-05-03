@@ -1,0 +1,90 @@
+#!/usr/bin/env python
+
+import sys, array, re
+from deflib import Field, Def, Def2H
+d2h = Def2H('recordmeta', [ 'record.h', '<stdint.h>', '<string>', '<vector>', '<map>' ], [ 'coh' ])
+d2h.setfiles(sys.argv[1:])
+d2h.before()
+
+print('template<class T> struct RecordTypeDispatch {')
+print('	T* callback;')
+print('	bool autoonly;')
+print('	RecordTypeDispatch(T& cb, bool ao = false): callback(&cb), autoonly(ao) { }')
+print('	void operator()(Record const& r) {')
+for fdef in d2h.deforder:
+	if not fdef.autodetect:
+		print('	if (!autoonly)')
+	print('	if (typeid(r) == typeid(record::' + d2h.NameFilter(fdef.name) + ')) {')
+	print('		(*callback)(static_cast<record::' + d2h.NameFilter(fdef.name) + ' const&>(r));')
+	print('		return; }')
+print('	if (typeid(r) == typeid(GenericRecord)) {')
+print('		(*callback)(static_cast<GenericRecord const&>(r));')
+print('		return; }')
+print('	throw err::Record_UnknownType();')
+print('}')
+print('};')
+
+print('template<class T> struct RecordFieldIter {')
+print('	T* callback;')
+print('	bool allfields;')
+print('	RecordFieldIter(T& cb, bool af = false): callback(&cb), allfields(af) { }')
+for fdef in d2h.deforder:
+	for field in fdef.fields:
+		field.ename = 'EnumInfo_' + fdef.name.replace('/', '_') + '__' + field.name
+		if field.enumkey:
+			print(' class ' + field.ename + ':public FieldEnumInfo {')
+			print(' 	public:')
+			print(' 	virtual string GetEnumKey() const { return "' + field.enumkey + '"; }')
+			print(' };')
+			print('')
+		elif field.enum:
+			print(' class ' + field.ename + ':public FieldEnumInfo {')
+			print(' 	public:')
+			print('		virtual FieldEnum GetEnum() const {')
+			print(' 		static FieldEnum ret;')
+			print(' 		if (ret.empty()) {')
+			for k, v in field.enum.items():
+				print(' 			ret.insert(std::pair<string, int32_t>("'+k+'", '+v+'));')
+			print(' 		}')
+			print(' 		return ret;')
+			print('		}')
+			print(' 	virtual FieldRevEnum GetReverseEnum() const {')
+			print('			static FieldRevEnum ret;')
+			print('			if (ret.empty()) {')
+			print('				FieldEnum fwdmap = GetEnum();')
+			print('				FieldEnum::iterator i;')
+			print('				for (i = fwdmap.begin(); i != fwdmap.end(); i++) {')
+			print('					ret.insert(std::pair<int32_t, string>((*i).second, (*i).first));')
+			print('				}')
+			print('			}')
+			print('			return ret;')
+			print('		}')
+			if 'flags' in field.flags:
+				print(' 	virtual bool IsFlags() const { return true; }')
+			print(' };')
+			print('')
+
+	print('	void operator()(record::' + d2h.NameFilter(fdef.name) + ' const& r) {')
+
+	for field in fdef.fields:
+		eparam = ''
+		if field.enumkey or field.enum:
+			eparam = ', ' + field.ename + '()'
+
+		if 'hidden' in field.flags:
+			print('		if (allfields)')
+		print('		(*callback)("' + field.name + '", r.' + field.name + eparam + ');')
+	
+	print(' }')
+	print('')
+
+print('	void operator()(GenericRecord const&) {}')
+print('};')
+
+print('template<class T> void RecordIterFields(Record const& r, T& callback, bool allfields = false) {')
+print('	RecordFieldIter<T> fielditer(callback, allfields);')
+print('	RecordTypeDispatch< RecordFieldIter<T> > dispatcher(fielditer, false);')
+print('	dispatcher(r);')
+print('}')
+
+d2h.after()

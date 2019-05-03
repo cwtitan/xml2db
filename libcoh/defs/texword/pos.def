@@ -1,0 +1,4 @@
+Def texword/Pos
+Simple
+	X		float
+	Y		float

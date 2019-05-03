@@ -1,0 +1,9 @@
+Def Origin
+AutoDetect
+NameHint origins.bin
+NameHint villain_origins.bin
+	Name			string:64	*Unique
+	DisplayName		string:255	*Index
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string:255

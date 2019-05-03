@@ -1,0 +1,10 @@
+Def VillainGroup
+AutoDetect
+NameHint VillainGroups.bin
+	Name			string
+	DisplayName		string
+	DisplaySingular		string
+	DisplayLeaderName	string
+	Description		string
+	ShowInKiosk		long
+	Ally			long

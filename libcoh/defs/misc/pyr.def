@@ -1,0 +1,5 @@
+Def misc/PYR
+Simple
+	Pitch	float
+	Yaw	float
+	Roll	float

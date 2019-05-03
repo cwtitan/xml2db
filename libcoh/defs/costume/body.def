@@ -1,0 +1,9 @@
+Def costume/Body
+	Filename	string
+	Name		string:255		*Unique
+	BodyPalette	array:record:costume/Palette	*Hidden *Coerce
+	SkinPalette	array:record:costume/Palette	*Hidden *Coerce
+	PowerPalette	array:record:costume/Palette	*Hidden *Coerce
+	Region		array:record:costume/Region
+	CostumeSet	array:record:costume/Set
+	GeoData		array:record:costume/GeoData	*Hidden

@@ -1,0 +1,63 @@
+import type ;
+import generators ;
+import project ;
+import "class" : new ;
+
+type.register DEF : def ;
+type.register DEF2H : def2h ;
+type.register DEF2CC : def2cc ;
+type.register DEF2PY : def2py ;
+
+rule topdir ( )
+{
+	local p = [ modules.binding $(__name__) ] ;
+	return $(p:D) ;
+}
+
+class def-generator : generator
+{
+	import path ;
+	import def ;
+
+	rule __init__ ( id : source-types * : target-types * : requirements * )
+	{
+		generator.__init__ $(id) : $(source-types) : $(target-types) : $(requirements) ;
+	}
+
+	rule run ( project name ? : property-set : sources * )
+	{
+		local result = [ run-really $(project) $(name) : $(property-set) : $(sources) ] ;
+		local top = [ def.topdir ] ;
+		local deflist = [ path.glob $(top)/defs : *.def */*.def ] ;
+		for local t in $(deflist)
+		{
+			local s = [ new file-target $(t) : DEF : $(project) : : $(t) ] ;
+			$(result).depends $(s) ;
+		}
+		return $(result) ;
+	}
+
+	rule action-class ( )
+	{
+		return compile-action ;
+	}
+}
+
+generators.register [ new def-generator def.mkdefs : DEF2H : H ] ;
+generators.register [ new def-generator def.mkdefs : DEF2CC : CPP ] ;
+generators.register [ new def-generator def.mkdefs : DEF2PY : PY ] ;
+
+rule init ( )
+{
+}
+
+rule mkdefs ( dst : src + : properties * )
+{
+	local p = [ modules.binding $(__name__) ] ;
+	PREFIX on $(<) = $(p:D) ;
+}
+
+actions mkdefs
+{
+	env PYTHONPATH=$(PREFIX)/defs python $(>) $(PREFIX)/defs/*.def $(PREFIX)/defs/*/*.def> $(<)
+}

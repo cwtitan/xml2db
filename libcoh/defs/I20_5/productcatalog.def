@@ -1,0 +1,22 @@
+Def I20_5_ProductCatalog
+VariantOf ProductCatalog
+AutoDetect
+	Title		string
+	LongDesc	string
+	ShortDesc	string
+	Warning		string
+	Category	long
+	Usage		long
+	StoreSection	long
+	StoreOrder	long
+	StoreIcon	long
+	StoreBlurb	long
+	StoreThanks	long
+	InventoryType	long
+	InventorySubtype long
+	InventoryCount	long
+	InventoryMax	long
+	Global		long
+	AuthBit		long
+	CostumeToken	long
+	BadgeGrant	long

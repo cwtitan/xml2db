@@ -1,0 +1,28 @@
+Def FxInfo
+AutoDetect
+NameHint fxinfo.bin
+	Name			string
+	FileAge			long
+	LifeSpan		long
+	Lighting		long
+	Input			array:record:misc/List
+	Condition		array:record:fxinfo/Condition
+	Flags			long		*Flags
+		EnumVal SoundOnly	0x00000001
+		EnumVal InheritAlpha	0x00000002
+		EnumVal IsArmor		0x00000004
+		EnumVal InheritAnimScale	0x00000008
+		EnumVal DontInheritBits		0x00000010
+		EnumVal DontSuppress		0x00000020
+		EnumVal DontInheritTexFromCostume	0x00000040
+		EnumVal UseSkinTint		0x00000080
+		EnumVal	IsShield		0x00000100
+		EnumVal IsWeapon		0x00000200
+		EnumVal NotCompatibleWithAnimalHead 0x00000400
+		EnumVal InheritGeoScale		0x00000800
+		EnumVal UseTargetSeq		0x00001000
+	PerformanceRadius	float
+	OnForceRadius		float
+	AnimScale		float
+	ClampMinScale		record:misc/XYZ
+	ClampMaxScale		record:misc/XYZ

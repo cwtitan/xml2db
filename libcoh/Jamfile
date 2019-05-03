@@ -1,0 +1,10 @@
+using def ;
+
+lib coh : buffer.cc error.cc pigg.cc pstring.cc record.cc
+	filename.cc binfile.cc recordimpl.def2cc :
+	<link>static ;
+
+explicit recordtypes.h ;
+h recordtypes.h : recordtypes.def2h : <link>static -<implicit-dependency>$(TOP)/libcoh//recordtypes.h -<implicit-dependency>$(TOP)/libcoh//recordmeta.h ;
+explicit recordmeta.h ;
+h recordmeta.h : recordmeta.def2h : <link>static -<implicit-dependency>$(TOP)/libcoh//recordtypes.h -<implicit-dependency>$(TOP)/libcoh//recordmeta.h ;

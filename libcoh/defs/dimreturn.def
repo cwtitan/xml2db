@@ -1,0 +1,6 @@
+Def DimReturn
+AutoDetect
+NameHint dim_returns.bin
+	Default		long
+	Attrib		array:long
+	Return		array:record:dimreturn/Set

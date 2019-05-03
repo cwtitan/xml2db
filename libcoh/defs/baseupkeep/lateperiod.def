@@ -1,0 +1,4 @@
+Def baseupkeep/LatePeriod
+	Period		long
+	ShutBaseDown	long
+	DenyBaseEntry	long

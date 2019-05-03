@@ -1,0 +1,7 @@
+Def ExemplarHandicaps
+AutoDetect
+NameHint exemplar_handicaps.bin
+	Low		array:float
+	Magnitude	array:float
+	High		array:float
+	Max		array:float	# ?

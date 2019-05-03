@@ -1,0 +1,9 @@
+Def Cards
+AutoDetect
+NameHint Cards.bin
+	Name		string
+	DisplayName	string
+	Icon		string
+	CardBack	string
+	Salvage		string
+	Card		array:record:cards/Card

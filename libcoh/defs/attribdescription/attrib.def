@@ -1,0 +1,9 @@
+Def attribdescription/Attrib
+	Name		string
+	DisplayName	string
+	Tooltip		string
+	Type		long
+	Style		long
+	Key		long
+	Offset		long
+	ShowBase	long

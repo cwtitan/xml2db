@@ -1,0 +1,10 @@
+Def AttribName
+AutoDetect
+NameHint attrib_names.bin
+	Damage		array:record:attribname/Sub
+	Defense		array:record:attribname/Sub
+	Boost		array:record:attribname/Sub
+	Group		array:record:attribname/Sub
+	Mode		array:record:attribname/Sub
+	Elusivity	array:record:attribname/Sub
+	StackKey	array:record:attribname/Sub

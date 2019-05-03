@@ -1,0 +1,26 @@
+Def Cape
+AutoDetect
+NameHint capes.bin
+	Name			string
+	Timestamp		ulong
+	GeoName			string
+	GeoFile			string
+	HarnessName		string
+	HarnessFile		string
+	Scroll			string
+	Color1			record:misc/RGB
+	Color2			record:misc/RGB
+	InnerColor1		record:misc/RGB
+	InnerColor2		record:misc/RGB
+	Tex3			string
+	Tex4			string
+	InnerTex1		string
+	InnerTex2		string
+	Stiffness		record:misc/XYZ
+	ScaleXY			record:misc/XY
+	LODBias			float
+	PointYScale		float
+	ColRad			float
+	IsFlag			long
+	Wind			string
+	Collision		string

@@ -1,0 +1,4 @@
+Def texword/Size
+Simple
+	Width		float
+	Height		float

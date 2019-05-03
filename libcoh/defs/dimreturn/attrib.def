@@ -1,0 +1,4 @@
+Def dimreturn/Attrib
+	Start		float
+	Handicap	float
+	Basis		float

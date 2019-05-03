@@ -1,0 +1,33 @@
+Def PowerSet_2300_201205310841_0
+VariantOf PowerSet
+AutoDetect
+	SourceFile	string:255
+        FullName        string:255      *Unique
+        Name            string:64
+	System		long
+	Shared		long
+	DisplayName	string:255	*Index
+	DisplayHelp	string
+	DisplayShortHelp string
+	IconName	string:255
+	CostumeKeys	array:string
+	CostumeParts	array:string
+	SetAccountRequires	string
+	SetAccountTooltip	string
+	SetAccountProduct	string
+	SetBuyRequires		array:string
+	SetBuyRequiresFailedText	string
+	ShowInInventory	long
+	ShowInManage	long
+	ShowInInfo	long
+	SpecializeAt	long
+	SpecializeRequires array:string
+	Powers		array:string:255
+	Available	long
+	AIMinLevel	array:long
+	AIMaxLevel	array:long
+	AIMinRankCon	array:long
+	AIMaxRankCon	array:long
+	MinDifficulty	array:long
+	MaxDifficulty	array:long
+	u001		long

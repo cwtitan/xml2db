@@ -1,0 +1,18 @@
+Def Plot
+AutoDetect
+NameHint plots.bin
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string
+	DisplayTabName		string
+	GroupName		string
+	Length			long
+	Width			long
+	MaxRaidParty		long
+	CostPrestige		long
+	CostInfluence		long
+	UpkeepPrestige		long
+	UpkeepInfluence		long
+	DetailAllowed		array:record:plot/Detail
+	Requires		array:string

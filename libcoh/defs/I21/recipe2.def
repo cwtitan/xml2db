@@ -1,0 +1,47 @@
+Def I21_Recipe2
+VariantOf Recipe
+AutoDetect
+	SourceFile		string
+	Name			string:255	*Unique
+	DisplayName		string:255	*Index
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string
+	DisplayTabName		string:255	*Index
+	DetailIcon		string
+	Workshop		array:string		*Index
+	Salvage			array:record:recipe/Salvage
+	SalvageComponent	array:record:recipe/Salvage
+	PowerComponent		array:record:recipe/Power
+	AdditionalComponents	array:string
+	Detail			string:255
+	DetailReward		string:255		*Index
+	Reward			string:255
+	TableReward		string:255		*Index
+	Enhancement		string:255
+	EnhancementReward	string:255		*Index
+	Recipe			string:255
+	RecipeReward		string:255		*Index
+	PowerReward		string:255		*Index
+	IncarnateReward		string:255		*Index
+	Requires		array:string
+	Rarity			long
+	Level			long
+	LevelMin		long
+	LevelMax		long
+	CreationCost		array:string
+	SellToVendor		long
+	BuyFromVendor		long
+	NumUses			long
+	Type			long
+	MaxInvAmount		long
+	CreatesEnhancement	long
+	CreatesInspiration	long
+	CreatesSalvage		long
+	CreatesRecipe		long
+	CreatesRequires		array:string
+	ReceiveRequires		array:string
+	NeverReceiveRequires	array:string
+	DisplayCreatesRequiresFail	string
+	DisplayReceiveRequiresFail	string
+	Flags			long

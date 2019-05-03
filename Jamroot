@@ -1,0 +1,25 @@
+using clang ;
+using python ;
+
+path-constant TOP : . ;
+project : requirements
+	<include>libcoh
+	<include>/usr/local/include
+	<library-path>/usr/local/lib
+	<implicit-dependency>$(TOP)/libcoh//recordtypes.h
+	<implicit-dependency>$(TOP)/libcoh//recordmeta.h ;
+
+lib zlib : : <name>z ;
+lib boost_filesystem : : <name>boost_filesystem <link>static ;
+lib boost_regex : : <name>boost_regex <link>static ;
+lib boost_program_options : : <name>boost_program_options <link>static ;
+lib boost_system : : <name>boost_system <link>static ;
+
+build-project libcoh ;
+build-project xml2db ;
+
+explicit dist dist-bin dist-lib dist-include ;
+alias dist : dist-bin dist-lib dist-include ;
+install dist-bin : xml2db//xml2db ;
+install dist-lib : libcoh//coh : <location>dist/lib ;
+install dist-include : libcoh//recordtypes.h libcoh//recordmeta.h libcoh//binfile.h libcoh//error.h libcoh//impl.h libcoh//filename.h libcoh//pigg.h libcoh//pstring.h libcoh//record.h libcoh//const.h : <location>dist/include ;

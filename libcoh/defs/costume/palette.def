@@ -1,0 +1,4 @@
+Def costume/Palette
+NameHint supergroupColors.bin
+	Color		array:record:costume/Color
+	Name		string:255		*Index

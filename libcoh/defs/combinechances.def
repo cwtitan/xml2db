@@ -1,0 +1,4 @@
+Def CombineChances
+NameHint combine_chances.bin
+NameHint combine_same_set_chances.bin
+	Chances		array:float

@@ -1,0 +1,24 @@
+Def costume/GeoSet
+AutoDetect
+NameHint supergroupEmblems.bin
+	DisplayName		string:255		*Index
+	BodyPart		string:255		*Index
+	ColorLink		string
+	Keys			array:string
+	Flags			array:string
+	Product			string
+	Type			long
+	AnimBits		array:string
+	ZoomBits		array:string
+	DefaultView		record:misc/XYZ		*Coerce
+	ZoomView		record:misc/XYZ		*Coerce
+	NumColor		long
+	NoDisplay		long
+	Info			array:record:costume/Info
+	Mask			array:record:costume/Mask
+	Masks			array:string
+	MaskNames		array:string
+	Legacy			long
+	Face			array:record:costume/Face	*Hidden
+	COV			long
+	COH			long

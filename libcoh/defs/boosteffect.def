@@ -1,0 +1,4 @@
+Def BoostEffect
+NameHint boost_effect_above.bin
+NameHint boost_effect_below.bin
+	Effect		array:float

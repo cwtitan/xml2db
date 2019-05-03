@@ -1,0 +1,5 @@
+Def particle/Color
+Simple
+	Red	float
+	Green	float
+	Blue	float

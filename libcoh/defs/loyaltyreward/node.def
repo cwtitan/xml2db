@@ -1,0 +1,8 @@
+Def loyaltyreward/Node
+	Name		string
+	DisplayName	string
+	DisplayHelp	string
+	GrantIncentive	array:string
+	Repeatable	long
+	Purchasable	long
+	VIPOnly		long

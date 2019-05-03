@@ -1,0 +1,8 @@
+Def lod/AutoLOD
+	AllowedError	float
+	LodNearFade	float
+	LodNear		float
+	LodFar		float
+	LodFarFade	float
+	LodFlags	long
+	ModelName	string

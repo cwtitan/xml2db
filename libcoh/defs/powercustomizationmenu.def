@@ -1,0 +1,6 @@
+Def PowerCustomizationMenu
+AutoDetect
+NameHint powercustomizationmenu.bin
+	CategoryName		string
+	SetName			array:string
+	SlotId			string

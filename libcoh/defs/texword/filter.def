@@ -1,0 +1,8 @@
+Def texword/Filter
+	Type		long
+	Magnitude	long
+	Percent		long
+	Spread		float
+	Color		array:long
+	Offset		record:texword/XY
+	Blend		long

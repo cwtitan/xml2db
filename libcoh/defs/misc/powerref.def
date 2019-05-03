@@ -1,0 +1,7 @@
+Def misc/PowerRef
+	PowerCategory        string:64
+	PowerSet             string:64
+	Power           string:128
+	Level           long
+	Remove          long
+	DontSetStance   long

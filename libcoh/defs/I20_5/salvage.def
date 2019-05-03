@@ -1,0 +1,20 @@
+Def I20_5_Salvage
+VariantOf Salvage
+AutoDetect
+	Name			string:255	*Unique
+	DisplayName		string:255	*Index
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string:255
+	DisplayTabName		string
+	DisplayDropMessage	string
+	Rarity			long
+	Type			long
+	Workshop		array:string:255	*Index
+	ChallengePoints		long
+	RewardTableName		string:255
+	MinReverseEngineerLevel	long
+	MaxInventoryAmount	long
+	SellAmount		long
+	AltSellAmount		long
+	Flags			long

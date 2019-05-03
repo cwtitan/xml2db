@@ -1,0 +1,5 @@
+Def I20_5_Costume
+VariantOf Costume
+AutoDetect
+	BodyType	string:255		*Unique
+	Body		array:record:costume/I20_5_Body

@@ -1,0 +1,5 @@
+Def villaindef/Entity
+	Level		long
+	DisplayNames	array:string
+	Costumes	array:string
+	XP		long

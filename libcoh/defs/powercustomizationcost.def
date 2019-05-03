@@ -1,0 +1,8 @@
+Def PowerCustomizationCost
+AutoDetect
+NameHint powercustomizationcost.bin
+	MinLevel		long
+	MaxLevel		long
+	EntryFee		long
+	PowerTokenCost		long
+	PowerColorCost		long

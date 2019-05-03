@@ -1,0 +1,5 @@
+Def minimap/FloorMap
+	Floor		long
+	DefaultXScale	float
+	DefaultYScale	float
+	MapImage	array:record:minimap/MapImage

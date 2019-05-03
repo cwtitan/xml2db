@@ -1,0 +1,3 @@
+Def defs/Def
+	Name		string
+	GeoRef		long

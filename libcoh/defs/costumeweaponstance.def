@@ -1,0 +1,5 @@
+Def CostumeWeaponStance
+AutoDetect
+NameHint bin/costumeWeaponStances.bin
+	u001		string
+	u002		long

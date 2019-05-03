@@ -1,0 +1,6 @@
+Def AnimList
+AutoDetect
+NameHint animlists.bin
+	Name		string
+	Anim		array:string
+	FileName	string

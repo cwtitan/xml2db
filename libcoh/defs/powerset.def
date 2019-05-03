@@ -1,0 +1,39 @@
+Def PowerSet
+AutoDetect
+NameHint powersets.bin
+	SourceFile	string:255
+        FullName        string:255      *Unique
+        Name            string:64
+	System		long
+		EnumVal Powers	0x00000000
+	Shared		bool
+	DisplayName	string:255	*Index
+	DisplayHelp	string
+	DisplayShortHelp string
+	IconName	string:255
+	CostumeKeys	array:string
+	CostumeParts	array:string
+	SetAccountRequires	string
+	SetAccountTooltip	string
+	SetAccountProduct	string
+	SetBuyRequires	array:string
+	SetBuyRequiresFailedText	string
+	ShowInInventory	long
+		EnumVal Never	0x00000000
+		EnumVal Default	0x00000001
+		EnumVal Always	0x00000002
+		EnumVal IfUsable 0x00000003
+		EnumVal IfOwned	0x00000004
+	ShowInManage	bool
+	ShowInInfo	bool
+	SpecializeAt	long
+	SpecializeRequires array:string
+	Powers		array:string:255
+	Unnamed		array:long
+	Available	array:long
+	AIMaxLevel	array:long
+	AIMinRankCon	array:long
+	AIMaxRankCon	array:long
+	MinDifficulty	array:long
+	MaxDifficulty	array:long
+	ForceLevelBought long

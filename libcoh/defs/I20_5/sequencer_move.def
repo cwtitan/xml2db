@@ -1,0 +1,19 @@
+Def sequencer/I20_5_Move
+VariantOf sequencer/Move
+	Name		string
+	MoveRate	float
+	Interpolate	long
+	Priority	long
+	Scale		float
+	NextMove	array:record:misc/List
+	CycleMove	array:record:misc/List
+	Type		array:record:sequencer/Type
+	Wind		string
+	Member		array:string
+	Interrupts	array:string
+	SticksOnChild	array:string
+	SetsOnChild	array:string
+	SetsOnReactor	array:string
+	Sets		array:string
+	Requires	array:string
+	Flags		long

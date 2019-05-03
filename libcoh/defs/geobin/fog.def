@@ -1,0 +1,5 @@
+Def geobin/Fog
+	u110	record:misc/XYZ
+	u113	record:misc/RGB
+	u116	record:misc/RGB
+	u119	float

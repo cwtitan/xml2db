@@ -1,0 +1,3 @@
+Def plot/Detail
+	Category	string
+	Limit		long

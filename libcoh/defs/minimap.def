@@ -1,0 +1,7 @@
+Def Minimap
+AutoDetect
+NameHint minimap.bin
+	Name			string
+	FloorMap		array:record:minimap/FloorMap
+	ItemMap			array:record:minimap/FloorMap
+	SpawnMap		array:record:minimap/FloorMap

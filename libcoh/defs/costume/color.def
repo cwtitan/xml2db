@@ -1,0 +1,4 @@
+Def costume/Color
+	Red		float
+	Green		float
+	Blue		float

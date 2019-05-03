@@ -1,0 +1,5 @@
+Def Experience
+NameHint experience.bin
+	NumBytes		long		*Skip
+	ExperienceRequired	array:long
+	DefeatPenalty		array:long

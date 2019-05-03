@@ -1,0 +1,7 @@
+Def texword/Font
+	Name		string
+	Size		long
+	Italic		long
+	Bold		long
+	Outline		long
+	DropShadow	record:texword/XY

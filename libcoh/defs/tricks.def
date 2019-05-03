@@ -1,0 +1,5 @@
+Def Tricks
+AutoDetect
+NameHint tricks.bin
+	Texture	array:record:tricks/Texture
+	LOD	array:record:tricks/LOD

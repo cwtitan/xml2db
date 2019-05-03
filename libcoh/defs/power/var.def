@@ -1,0 +1,5 @@
+Def power/Var
+	Index		long
+	Name		string
+	Min		float
+	Max		float

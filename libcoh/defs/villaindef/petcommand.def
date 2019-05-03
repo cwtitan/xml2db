@@ -1,0 +1,12 @@
+Def villaindef/PetCommand
+	Passive		array:string
+	Defensive	array:string
+	Aggressive	array:string
+	AttackTarget	array:string
+	AttackNoTarget	array:string
+	StayHere	array:string
+	UsePower	array:string
+	UsePowerNone	array:string
+	FollowMe	array:string
+	GotoSpot	array:string
+	Dismiss		array:string

@@ -1,0 +1,5 @@
+Def Costume
+AutoDetect
+NameHint costume.bin
+	BodyType	string:255		*Unique
+	Body		array:record:costume/Body

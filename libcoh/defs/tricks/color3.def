@@ -1,0 +1,4 @@
+Def tricks/Color3
+	Red		long
+	Green		long
+	Blue		long

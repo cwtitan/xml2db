@@ -1,0 +1,6 @@
+Def ChestGeoLink
+AutoDetect
+NameHint chestGeoLink.bin
+	BonesetName		string
+	GeoStrings		array:string
+	FileName		string

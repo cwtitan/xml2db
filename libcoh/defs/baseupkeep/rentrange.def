@@ -1,0 +1,3 @@
+Def baseupkeep/RentRange
+	RentMax		long
+	Rate		long

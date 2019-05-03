@@ -1,0 +1,5 @@
+Def fxinfo/Sound
+	Sound		string
+	u201		float
+	u202		float
+	u203		float

@@ -1,0 +1,167 @@
+#!/usr/bin/env python
+
+import sys, array, re
+from deflib import Field, Def, Def2CC
+
+d2c = Def2CC([ 'record.h', 'recordtypes.h', 'buffer.h', '<boost/scoped_ptr.hpp>', '<boost/unordered_map.hpp>', '<memory>' ], [ 'coh' ])
+
+d2c.before()
+d2c.setfiles(sys.argv[1:])
+fnhintcache = {}
+
+print('namespace record {')
+
+for fdef in d2c.deforder:
+	nparts = d2c.NameComponents(fdef.name)
+	for ns in nparts[:-1]:
+		print('namespace ' + ns + ' {')
+	print('string ' + nparts[-1] + '::TypeName() const {')
+	print('	return StaticTypeName();')
+	print('}')
+	print('string ' + nparts[-1] + '::FamilyName() const {')
+	print(' return StaticFamilyName();')
+	print('}')
+	print('string ' + nparts[-1] + '::NameHint() const {')
+	print('	return "' + (len(fdef.namehints) and fdef.namehints[0] or "") + '";')
+	print('}')
+	print('void ' + nparts[-1] + '::ParseFields(Buffer& buf) {')
+	for field in fdef.fields:
+		print('	buf >> ' + field.name + ';')
+	print('}')
+	print(nparts[-1] + '::Family* ' + nparts[-1] + '::ToFamily() const {')
+	if fdef.variantof:
+		print('	' + nparts[-1] + '::Family* ret = new ' + nparts[-1]+ '::Family;')
+		print('	*ret = *this;')
+		print('	return ret;')
+	else:
+		print('	return 0;')
+	print('}')
+	for variant in fdef.variants:
+		print(nparts[-1] + '& ' + nparts[-1] + '::operator=(' + d2c.NameFilter(variant) + ' const& orig) {')
+		vnmap = {}
+		vdef = d2c.alldefs[variant]
+		for field in vdef.fields:
+			vnmap[field.name] = field
+		for field in fdef.fields:
+			if field.name in vnmap and ((vnmap[field.name].type == field.type) or (not field.isarray and vnmap[field.name].isrecord and field.isrecord)) and vnmap[field.name].isarray == field.isarray:
+				print('	' + field.name + ' = orig.' + field.name + ';')
+			elif field.name in vnmap and field.isarray and vnmap[field.name].isarray:
+				print('	' + field.name + '.resize(orig.' + field.name + '.size());')
+				print('	for (size_t i = 0; i < orig.' + field.name + '.size(); ++i) {')
+				print('		' + field.name + '[i] = orig.' + field.name + '[i]; }')
+			elif field.type != "string" and not field.isrecord and not field.isarray:
+				print('	' + field.name + ' = 0;')
+		print('	return *this;')
+		print('}')
+	for ns in nparts[:-1]:
+		print('}')
+	print('')
+	for nhint in fdef.namehints:
+		fnhintcache[nhint] = d2c.NameFilter(fdef.name)
+
+print('}')
+print('')
+
+print('using std::shared_ptr;')
+print('using boost::scoped_ptr;')
+print('using boost::unordered_map;')
+print('typedef unordered_map< string, RecordFactory const* > rmap;')
+print('static rmap mkhintcache() {')
+print('	rmap ret;')
+for k, v in fnhintcache.items():
+	print('	ret["' + k + '"] = &RecordFactoryT<record::' + v + '>::Get();')
+print('	return ret;')
+print('}')
+print('static rmap const& hintcache() {')
+print('	static rmap hc = mkhintcache();')
+print('	return hc;')
+print('}')
+print('template <class T>')
+print('	inline void TryRecord(Buffer& in, Buffer::offset_type start, DetectResults& progress, string family = "") {')
+print('		scoped_ptr<T> tmp(new T);')
+print('		if (family.size() && family != tmp->FamilyName())')
+print('			return;')
+print('		in.ClearFuzz();')
+print('		int cur = tmp->Parse(in);')
+print('		cur += in.Fuzz();')
+print('		in.Seek(start);')
+print('		if (cur < progress.Score || progress.Score < 0) {')
+print('			progress.Factory = &RecordFactoryT<T>::Get();')
+print('			progress.Score = cur;')
+print('		}')
+print('	}')
+print('DetectResults DetectRecord(Buffer& in, string namehint, bool repeat) {')
+print('	DetectResults progress;')
+print('	Buffer::offset_type off = in.Tell();')
+print('	if (!namehint.empty()) {')
+print('		rmap const& hcache = hintcache();')
+print('		rmap::const_iterator i = hcache.find(namehint);')
+print('		if (i != hcache.end()) {')
+print('			progress.Factory = i->second;')
+print('			scoped_ptr<Record> tmp(progress.Factory->Create());')
+print('			int cur = -1;')
+print('			in.ClearFuzz();')
+print('			if (repeat) {')
+print('				while(in.Tell() < in.Size())')
+print('					cur = tmp->Parse(in);')
+print('			} else')
+print('				cur = tmp->Parse(in);')
+print('			in.Seek(off);')
+print('			progress.Score = cur + in.Fuzz();')
+print('			if (progress.Score == 0)')
+print('				return progress;')
+print('		}')
+print('	}')
+for fdef in d2c.deforder:
+	if fdef.autodetect:
+		print('	TryRecord<record::' + d2c.NameFilter(fdef.name) + '>(in, off, progress);')
+		print('	if (progress.Score == 0)')
+		print('		return progress;')
+print('	if (!progress.Factory)')
+print('		throw err::Record_UnknownType();')
+print('	return progress;')
+print('}')
+print('')
+print('DetectResults RecordByFamily(Buffer& in, string family) {')
+print('	DetectResults progress;')
+print('	Buffer::offset_type off = in.Tell();')
+print('	try {')
+print('		progress.Factory = &RecordByName(family);')
+print('		scoped_ptr<Record> tmp(progress.Factory->Create());')
+print('		int cur = -1;')
+print('		in.ClearFuzz();')
+print('		cur = tmp->Parse(in);')
+print('		in.Seek(off);')
+print('		progress.Score = cur + in.Fuzz();')
+print('		if (progress.Score == 0)')
+print('			return progress;')
+print(' } catch(err::Record_UnknownType()) {}')
+for fdef in d2c.deforder:
+	if fdef.autodetect:
+		print('	TryRecord<record::' + d2c.NameFilter(fdef.name) + '>(in, off, progress, family);')
+		print('	if (progress.Score == 0)')
+		print('		return progress;')
+print('	if (!progress.Factory)')
+print('		throw err::Record_UnknownType();')
+print('	return progress;')
+print('}')
+print('')
+print('static rmap mknamecache() {')
+print('	rmap ret;')
+for fdef in d2c.deforder:
+	print('	ret["' + fdef.name + '"] = &RecordFactoryT<record::' + d2c.NameFilter(fdef.name) + '>::Get();')
+print('	return ret;')
+print('}')
+print('static rmap const& namecache() {')
+print('	static rmap nc = mknamecache();')
+print('	return nc;')
+print('}')
+print('RecordFactory const& RecordByName(string name) {')
+print('	rmap const& ncache = namecache();')
+print('	rmap::const_iterator i = ncache.find(name);')
+print('	if (i != ncache.end()) {')
+print('		return *(i->second);')
+print('	}')
+print('	throw err::Record_UnknownType();')
+print('}')
+d2c.after()

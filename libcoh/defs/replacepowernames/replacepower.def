@@ -1,0 +1,3 @@
+Def replacepowernames/ReplacePower
+	Old		string
+	New		string

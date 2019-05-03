@@ -1,0 +1,5 @@
+Def misc/RGB
+Simple
+	Red		long
+	Green		long
+	Blue		long

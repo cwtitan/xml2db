@@ -1,0 +1,37 @@
+Def I20_5_CClass
+VariantOf CClass
+AutoDetect
+	Name			string:255			*Unique
+	DisplayName		string:255			*Index
+	DisplayHelp		string
+	AllowedOrigins		array:string
+	SpecialRestrictions	array:string
+	LevelUpRespecs		array:long
+	DisplayShortHelp	string
+	Icon			string:255
+	PrimaryCategory		string
+	SecondaryCategory	string
+	PowerPoolCategory	string
+	EpicPoolCategory	string
+	AttribMin		array:record:cclass/Attrib	*Hidden *Coerce
+	AttribBase		array:record:cclass/Attrib	*Hidden *Coerce
+	StrengthMin		array:record:cclass/Attrib	*Hidden *Coerce
+	ResistanceMin		array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminStrIn	array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminStrOut	array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminCurIn	array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminCurOut	array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminResIn	array:record:cclass/Attrib	*Hidden *Coerce
+	AtrribDiminResOut	array:record:cclass/Attrib	*Hidden *Coerce
+	AttribMaxTable		array:record:cclass/AttribTable	*Hidden *Coerce
+	AttribMaxMaxTable	array:record:cclass/AttribTable	*Hidden *Coerce
+	StrengthMaxTable	array:record:cclass/AttribTable	*Hidden *Coerce
+	ResistanceMaxTable	array:record:cclass/AttribTable	*Hidden *Coerce
+	ModTable		array:record:cclass/Mod		*Hidden
+	u001			long
+	u002			long
+	u003			float
+	u004			long
+	u005			long
+	u006			long
+	u007			long

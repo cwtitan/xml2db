@@ -1,0 +1,67 @@
+Def fxinfo/Event
+	Name		string
+	Type		long
+        	EnumVal Create		0x00000001
+        	EnumVal Destroy		0x00000002
+        	EnumVal Local		0x00000003
+        	EnumVal Start		0x00000004
+        	EnumVal Posit		0x00000005
+        	EnumVal StartPositOnly		0x00000006
+        	EnumVal PositOnly		0x00000007
+        	EnumVal SetState		0x00000008
+        	EnumVal IncludeFx		0x00000009
+        	EnumVal SetLight		0x0000000A
+	Inherit		long		*Flags
+        	EnumVal None		0x00000000
+        	EnumVal Rotation		0x00000002
+        	EnumVal SuperRotation		0x0000000A
+        	EnumVal Position		0x00000001
+        	EnumVal Scale		0x00000004
+        	EnumVal All		0x00000007
+	Update		long		*Flags
+		EnumSameAs Inherit
+	At		string
+	Bhvr		string
+	BhvrOverride	array:record:Behavior
+	JEvent		string
+	CEvent		string
+	CDestroy	long
+	JDestroy	long
+	CRotation	float		*Flags
+        	EnumVal UseCollisionNormal		0x00000000
+        	EnumVal UseWorldUp		0x00000001
+	ParentVelocityFraction	float
+	CThresh		float
+	HardwareOnly	bool
+	SoftwareOnly	bool
+	PhysicsOnly	bool
+	CameraSpace	bool
+	RayLength	float
+	AtRayFx		string
+	Geom		array:record:fxinfo/StringArray
+	Cape		array:record:fxinfo/StringArray
+	AltPiv		long
+	AnimPiv		string
+	Part		array:record:fxinfo/StringArray
+	Anim		string
+	SetState	string
+	ChildFx		string
+	Magnet		string
+	LookAt		string
+	PMagnet		string
+	POther		string
+	Splat		array:record:fxinfo/Splat
+	Sound		array:record:fxinfo/Sound
+	SoundNoRepeat	long
+	LifeSpan	float
+	LifeSpanJitter	float
+	Power		record:fxinfo/Power
+	While		array:record:fxinfo/StringArray
+	Until		array:record:fxinfo/StringArray
+	WorldGroup	string
+	Flags		long		*Flags
+        	EnumVal AdoptParentEntity		0x00000001
+        	EnumVal NoReticle		0x00000002
+        	EnumVal PowerLoopingSound		0x00000004
+        	EnumVal OneAtATime		0x00000008
+

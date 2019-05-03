@@ -1,0 +1,6 @@
+Def misc/RGBA
+Simple
+	Red		long
+	Green		long
+	Blue		long
+	Alpha		long

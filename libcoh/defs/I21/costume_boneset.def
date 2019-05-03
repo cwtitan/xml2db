@@ -1,0 +1,11 @@
+Def costume/I21_BoneSet
+VariantOf costume/BoneSet
+	Name		string:255		*Unique
+	Filename	string
+	DisplayName	string:255		*Index
+	Keys		array:string
+	Product		string
+	GeoSet		array:record:costume/GeoSet
+	Legacy		long
+	COV		long
+	COH		long

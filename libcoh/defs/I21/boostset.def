@@ -1,0 +1,9 @@
+Def I21_BoostSet
+VariantOf BoostSet
+AutoDetect
+	Name		string
+	DisplayName	string
+	GroupName	string
+	Powers		array:string
+	BoostLists	array:record:boostset/List
+	Bonuses		array:record:boostset/Bonus

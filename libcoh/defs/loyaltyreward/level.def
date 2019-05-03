@@ -1,0 +1,8 @@
+Def loyaltyreward/Level
+	Name			string
+	DisplayName		string
+	DisplayVIP		string
+	DisplayFree		string
+	GrantIncentive		array:string
+	LoyaltyPointsRequired	long
+	InfluenceCap		long64

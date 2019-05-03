@@ -1,0 +1,5 @@
+Def behavior/Bitfield
+	Param1		long
+	Param2		long
+	Param3		long
+	Param4		long

@@ -1,0 +1,44 @@
+Def power/Suppression
+	Event		long
+		EnumVal Activate 0x00000000
+		EnumVal ActivateAttackClick 0x00000001
+		EnumVal EndActivate 0x00000007
+		EnumVal Hit 0x00000005
+		EnumVal HitByOther 0x0000000B
+		EnumVal HitByFriend 0x0000000C
+		EnumVal HitByFoe 0x0000000D
+		EnumVal Miss 0x00000006
+		EnumVal MissByOther 0x0000000E
+		EnumVal MissByFriend 0x0000000F
+		EnumVal MissByFoe 0x00000010
+		EnumVal Attacked 0x00000002
+		EnumVal AttackedNoException 0x00000003
+		EnumVal AttackedByOther 0x00000008
+		EnumVal AttackedByOtherClick 0x00000009
+		EnumVal Helped 0x00000004
+		EnumVal HelpedByOther 0x0000000A
+		EnumVal Damaged 0x00000011
+		EnumVal Healed 0x00000012
+		EnumVal Stunned 0x00000013
+		EnumVal Stun 0x00000013
+		EnumVal Immobilized 0x00000014
+		EnumVal Immobilize 0x00000014
+		EnumVal Held 0x00000015
+		EnumVal Sleep 0x00000016
+		EnumVal Terrorized 0x00000017
+		EnumVal Terrorize 0x00000017
+		EnumVal Confused 0x00000018
+		EnumVal Confuse 0x00000018
+		EnumVal Untouchable 0x00000019
+		EnumVal Intangible 0x0000001A
+		EnumVal OnlyAffectsSelf 0x0000001B
+		EnumVal AnyStatus 0x0000001C
+		EnumVal Knocked 0x0000001D
+		EnumVal Defeated 0x0000001E
+		EnumVal MissionObjectClick 0x0000001F
+		EnumVal Moved 0x00000020
+		EnumVal Defiant 0x00000021
+	Seconds		long
+	Always		long
+		EnumVal WhenInactive 0x00000000
+		EnumVal Always 0x00000001

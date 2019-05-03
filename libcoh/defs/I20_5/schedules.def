@@ -1,0 +1,12 @@
+Def I20_5_Schedules
+VariantOf Schedules
+AutoDetect
+	NumBytes		long
+	FreeBoostSlotsOnPower	array:long
+	PoolPowerSet		array:long
+	EpicPowerSet		array:long
+	Power			array:long
+	AssignableBoost		array:long
+	InspirationCol		array:long
+	InspirationRow		array:long
+	BoostSlot		array:long

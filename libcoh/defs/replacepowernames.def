@@ -1,0 +1,5 @@
+Def ReplacePowerNames
+AutoDetect
+NameHint replacepowernames.bin
+	ReplacePower1	array:record:replacepowernames/ReplacePower
+	ReplacePower2	array:record:replacepowernames/ReplacePower

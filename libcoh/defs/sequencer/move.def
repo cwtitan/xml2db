@@ -1,0 +1,108 @@
+Def sequencer/Move
+	Name		string
+	MoveRate	float
+	Interpolate	long
+	Priority	long
+	Scale		float
+	NextMove	array:record:misc/List
+	CycleMove	array:record:misc/List
+	Type		array:record:sequencer/Type
+	Wind		string
+	Member		array:string
+	Interrupts	array:string
+	SticksOnChild	array:string
+	SetsOnChild	array:string
+	SetsOnReactor	array:string
+	Sets		array:string
+	Requires	array:string
+	Flags		long		*Flags
+		EnumVal Cycle 0x00000001
+		EnumVal FinishCycle 0x00000004
+		EnumVal ReqInputs 0x00000008
+		EnumVal NoInterp 0x00000020
+		EnumVal HitReact 0x00000040
+		EnumVal NoSizeScale 0x00000080
+		EnumVal AlwaysSizeScale 0x00004000
+		EnumVal FullSizeScale 0x00002000
+		EnumVal MoveScale 0x00000100
+		EnumVal NotSelectable 0x00000200
+		EnumVal SmoothSprint 0x00000400
+		EnumVal PitchToTarget 0x00000800
+		EnumVal PickRandomly 0x00001000
+		EnumVal FixArmReg 0x00008000
+		EnumVal Hide 0x00010000
+		EnumVal NoCollision 0x00020000
+		EnumVal WalkThrough 0x00040000
+		EnumVal CantMove 0x00080000
+		EnumVal RunIn 0x00100000
+		EnumVal FixHipsReg 0x00400000
+		EnumVal DoNotDelay 0x00800000
+		EnumVal FixWeaponReg 0x01000000
+		EnumVal NoDraw 0x02000000
+		EnumVal HideWeapon 0x08000000
+		EnumVal HideShield 0x10000000
+	Index		long
+	NextCount	long
+	CycleCount	long
+	Next1		long
+	Next2		long
+	Next3		long
+	Next4		long
+	Cycle1		long
+	Cycle2		long
+	Cycle3		long
+	Cycle4		long
+	Cycle5		long
+	RequiresCount	long
+	Requires1	long
+		EnumKey SeqBit
+	Requires2	long
+		EnumKey SeqBit
+	Requires3	long
+		EnumKey SeqBit
+	Requires4	long
+		EnumKey SeqBit
+	Requires5	long
+		EnumKey SeqBit
+	Requires6	long
+		EnumKey SeqBit
+	Requires7	long
+		EnumKey SeqBit
+	Requires8	long
+		EnumKey SeqBit
+	Requires9	long
+		EnumKey SeqBit
+	Requires10	long
+		EnumKey SeqBit
+	Requires11	long
+		EnumKey SeqBit
+	Requires12	long
+		EnumKey SeqBit
+	MemberBits1	ulong
+	MemberBits2	ulong
+	MemberBits3	ulong
+	MemberBits4	ulong
+	MemberBits5	ulong
+	MemberBits6	ulong
+	MemberBits7	ulong
+	MemberBits8	ulong
+	MemberBits9	ulong
+	MemberBits10	ulong
+	MemberBits11	ulong
+	MemberBits12	ulong
+	MemberBits13	ulong
+	MemberBits14	ulong
+	InterruptBits1	ulong
+	InterruptBits2	ulong
+	InterruptBits3	ulong
+	InterruptBits4	ulong
+	InterruptBits5	ulong
+	InterruptBits6	ulong
+	InterruptBits7	ulong
+	InterruptBits8	ulong
+	InterruptBits9	ulong
+	InterruptBits10	ulong
+	InterruptBits11	ulong
+	InterruptBits12	ulong
+	InterruptBits13	ulong
+	InterruptBits14	ulong

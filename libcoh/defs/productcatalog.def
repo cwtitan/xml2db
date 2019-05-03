@@ -1,0 +1,15 @@
+Def ProductCatalog
+AutoDetect
+NameHint product_catalog.bin
+	Title		string
+	SKU		ulong64
+	InventoryType	long
+	ProductFlags	long
+	InventoryCount	long
+	InventoryMax	long
+	ExpirationSecs	long
+	GrantLimit	long
+	AuthBit		long
+	ItemKey		string
+	StartDate	long
+	EndDate		long

@@ -1,0 +1,23 @@
+Def costume/I20_5_GeoSet
+VariantOf costume/GeoSet
+NameHint supergroupEmblems.bin
+	DisplayName		string:255		*Index
+	BodyPart		string:255		*Index
+	ColorLink		string
+	Keys			array:string
+	Flags			array:string
+	Type			long
+	AnimBits		array:string
+	ZoomBits		array:string
+	DefaultView		record:misc/XYZ		*Coerce
+	ZoomView		record:misc/XYZ		*Coerce
+	NumColor		long
+	NoDisplay		long
+	Info			array:record:costume/I20_5_Info
+	Mask			array:record:costume/I20_5_Mask
+	Masks			array:string
+	MaskNames		array:string
+	Legacy			long
+	Face			array:record:costume/Face	*Hidden
+	COV			long
+	COH			long

@@ -1,0 +1,26 @@
+Def geobin/Def
+	Name		string
+	Group		array:record:geobin/Group
+	Property	array:record:geobin/Property
+	TintColor	array:record:geobin/TintColor
+	Ambient		array:record:geobin/Ambient
+	Omni		array:record:geobin/Omni
+	Cubemap		array:record:geobin/Cubemap
+	Volume		array:record:geobin/Volume
+	Sound		array:record:geobin/Sound
+	ReplaceTex	array:record:geobin/ReplaceTex
+	Beacon		array:record:geobin/Beacon
+	Fog		array:record:geobin/Fog
+	Lod		array:record:geobin/Lod
+	Type		string
+	Flags		long
+		EnumVal Ungroupable 0x00000001
+		EnumVal FadeNode 0x00000002
+		EnumVal FadeNode2 0x00000004
+		EnumVal NoFogClip 0x00000008
+		EnumVal NoColl 0x00000010
+		EnumVal NoOcclusion 0x00000020
+	Alpha		float
+	Obj		string
+	TexSwap		array:record:geobin/TexSwap
+	SoundScript	string

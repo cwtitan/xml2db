@@ -1,0 +1,61 @@
+Def Badge
+AutoDetect
+NameHint badges.bin
+NameHint supergroup_badges.bin
+	SourceFile		string
+	Name			string:64	*Unique
+	Index			long
+	Collection		long
+        	EnumVal kBadge 0x00000000
+        	EnumVal kMarket 0x00000001
+        	EnumVal kSuperPack 0x00000002
+        	EnumVal kIncarnate 0x00000003
+        	EnumVal kSupergroup 0x00000004
+	Category		long
+        	EnumVal kNone 0x00000000
+        	EnumVal kInternal 0x00000000
+        	EnumVal kTourism 0x00000001
+        	EnumVal kHistory 0x00000002
+        	EnumVal kAccomplishment 0x00000003
+        	EnumVal kAchievement 0x00000004
+        	EnumVal kPerk 0x00000005
+        	EnumVal kGladiator 0x00000006
+        	EnumVal kVeteran 0x00000007
+        	EnumVal kPVP 0x00000008
+        	EnumVal kInvention 0x00000009
+        	EnumVal kDefeat 0x0000000A
+        	EnumVal kEvent 0x0000000B
+        	EnumVal kFlashback 0x0000000C
+        	EnumVal kAuction 0x0000000D
+        	EnumVal kDayJob 0x0000000E
+        	EnumVal kArchitect 0x0000000F
+        	EnumVal kContent 0x00000011
+        	EnumVal kSignatureStoryArc1 0x00000012
+        	EnumVal kSignatureStoryArc2 0x00000013
+        	EnumVal kHeroesAndVillains 0x00000014
+        	EnumVal kRoguesAndVigilantes 0x00000015
+        	EnumVal kEmpyrean 0x00000016
+        	EnumVal kAstral 0x00000017
+	SteamExport		string
+	DisplayHint		string
+	DisplayText		string
+	DisplayTitle		string
+	Icon			string
+	DisplayHintVillain	string
+	DisplayTextVillain	string
+	DisplayTitleVillain	string
+	VillainIcon		string
+	Reward		array:string
+	Visible		array:string
+	Hinted		array:string
+	Requires	array:string
+	Meter		array:string
+	Revoke		array:string
+	DisplayButton	string
+	ButtonReward	array:string
+	DoNotCount	bool
+	DisplayPopup	string
+	AwardText	string
+	AwardTextColor	record:misc/RGBA
+	Contacts	array:string
+	BadgeValues	long

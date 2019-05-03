@@ -1,0 +1,5 @@
+Def tricks/Color4
+	Red		long
+	Green		long
+	Blue		long
+	u300		long

@@ -1,0 +1,7 @@
+Def ConversionSet
+AutoDetect
+NameHint conversionsets.bin
+	Name		string
+	InSet		long
+	OutSet		long
+	AllowAttuned	long

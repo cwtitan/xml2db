@@ -1,0 +1,12 @@
+Def BoostSet
+AutoDetect
+NameHint boostsets.bin
+	Name			string
+	DisplayName		string
+	GroupName		string
+	ConversionGroups	array:string
+	Powers			array:string
+	BoostLists		array:record:boostset/List
+	Bonuses			array:record:boostset/Bonus
+	MinLevel		long
+	MaxLevel		long

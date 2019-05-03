@@ -1,0 +1,9 @@
+Def Item
+AutoDetect
+NameHint items.bin
+	Name		string
+	Power		record:misc/PowerRef
+	Sell		long
+	Buy		long
+	CountPerStore	long
+	Departments	array:long

@@ -1,0 +1,8 @@
+Def I21_6_GeoBin
+VariantOf GeoBin
+AutoDetect
+	Version		long
+	Scenefile	string
+	Defs		array:record:geobin/Def
+	Refs		array:record:geobin/Ref
+	Import		string

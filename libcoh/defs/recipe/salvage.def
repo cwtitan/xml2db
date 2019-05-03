@@ -1,0 +1,3 @@
+Def recipe/Salvage
+	Amount		long
+	Salvage		string:255

@@ -1,0 +1,5 @@
+Def InvSalvage
+AutoDetect
+NameHint InvSalvage.bin
+	Index		long
+	Name		string

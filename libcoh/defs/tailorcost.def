@@ -1,0 +1,14 @@
+Def TailorCost
+AutoDetect
+NameHint tailorcost.bin
+	MinLevel		long
+	MaxLevel		long
+	EntryFee		long
+	Global			long
+	HeadCost		long
+	HeadSubCost		long
+	UpperCost		long
+	UpperSubCost		long
+	LowerCost		long
+	LoserSubCost		long
+	NumCostumes		long

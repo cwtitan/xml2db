@@ -1,0 +1,7 @@
+Def AnimationMenu
+AutoDetect
+NameHint menuAnimations.bin
+	Name			string
+	BitName			string
+	BitName2		string
+	FileName		string

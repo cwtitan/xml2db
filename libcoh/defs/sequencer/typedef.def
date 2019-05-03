@@ -1,0 +1,4 @@
+Def sequencer/TypeDef
+	Name		string
+	BaseSkeleton	string
+	ParentType	string

@@ -1,0 +1,20 @@
+Def texword/Layer
+	Name		string
+	Type		long
+	Stretch		long
+	Text		string
+	Image		string
+	Color		array:long
+	Color0		array:long
+	Color1		array:long
+	Color2		array:long
+	Color3		array:long
+	Pos		record:texword/Pos
+	Size		record:texword/Size
+	Rot		float
+	Hidden		long
+	Font		record:texword/Font
+	Filter		array:record:texword/Filter
+	SubLayer	array:record:texword/Layer
+	SubBlend	long
+	SubBlendWeight	float

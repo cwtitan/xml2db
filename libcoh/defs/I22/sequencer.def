@@ -1,0 +1,7 @@
+Def I22_Sequencer
+VariantOf Sequencer
+AutoDetect
+	FileName	string
+	TypeDef		array:record:sequencer/TypeDef
+	Group		array:record:misc/List
+	Move		array:record:sequencer/I22_Move

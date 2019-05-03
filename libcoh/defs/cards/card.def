@@ -1,0 +1,11 @@
+Def cards/Card
+	Number		long
+	Rarity		string
+	Count		long
+	DisplayCount	long
+	Product		string
+	Title		string
+	Category	string
+	Description	string
+	Border		string
+	Icon		string

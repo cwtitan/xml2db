@@ -1,0 +1,11 @@
+Def costume/Mask
+	Name		string:255		*Unique
+	DisplayName	string:255		*Index
+	Keys		array:string
+	Product		string
+	Tag		string
+	Legacy		long
+	DevOnly		long
+	COV		long
+	COH		long
+	COHV		long

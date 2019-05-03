@@ -1,0 +1,7 @@
+Def geobin/Omni
+	u060		long
+	u061		long
+	u062		long
+	u063		float
+	Flags		long		*Flags
+		EnumVal	Negative 0x0000001

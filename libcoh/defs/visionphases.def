@@ -1,0 +1,4 @@
+Def VisionPhases
+NameHint visionPhases.bin
+NameHint VisionPhasesExclusive.bin
+	Name		array:string

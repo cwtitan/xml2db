@@ -1,0 +1,5 @@
+Def attribname/Sub
+	Name		string
+	DisplayName	string
+	IconName	string
+

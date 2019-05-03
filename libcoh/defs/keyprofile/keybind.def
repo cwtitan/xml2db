@@ -1,0 +1,3 @@
+Def keyprofile/KeyBind
+	Key		string
+	Command		string

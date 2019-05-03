@@ -1,0 +1,13 @@
+Def tricks/Fallback
+	ScaleST0		record:tricks/Scale
+	ScaleST1		record:tricks/Scale
+	Base			string
+	Blend			string
+	BumpMap			string
+	BlendType		long
+	UseFallback		long
+	DiffuseScale		record:tricks/LightScale
+	AmbientScale		record:tricks/LightScale
+	u507			long	# AmbientMin?
+	u508			long	# DiffuseScaleVec?
+	u509			long	# AmbientScaleVec? / AmbientMinVec?

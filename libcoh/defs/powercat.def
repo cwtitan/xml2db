@@ -1,0 +1,10 @@
+Def PowerCat
+AutoDetect
+NameHint powercats.bin
+        SourceFile      string:255
+        Name            string:64	*Unique
+	DisplayName	string:255	*Index
+	DisplayHelp	string
+	DisplayShortHelp string
+	PowerSets	array:string:255
+	unnamed		array:long

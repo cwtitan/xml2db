@@ -1,0 +1,8 @@
+Def SeqStateBit
+AutoDetect
+NameHint seqstatebits.bin
+	Name		string
+	Flags		long	*Flags
+        	EnumVal Predictable 0x00000004
+        	EnumVal Flash 0x00000002
+        	EnumVal Continuing 0x00000001

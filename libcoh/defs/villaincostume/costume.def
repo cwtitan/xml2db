@@ -1,0 +1,23 @@
+Def villaincostume/Costume
+	EntTypeFile		string
+	CostumeFilePrefix	string
+	Scale			float
+	BoneScale		float
+	HeadScale		float
+	ShoulderScale		float
+	ChestScale		float
+	WaistScale		float
+	HipScale		float
+	LegScale		float
+	ArmScale		float
+	HeadScales		record:misc/XYZ
+	BrowScales		record:misc/XYZ
+	CheekScales		record:misc/XYZ
+	ChinScales		record:misc/XYZ
+	CraniumScales		record:misc/XYZ
+	JawScales		record:misc/XYZ
+	NoseScales		record:misc/XYZ
+	SkinColor		record:misc/RGB
+	NumParts		long
+	BodyType		long
+	CostumePart		array:record:villaincostume/CostumePart

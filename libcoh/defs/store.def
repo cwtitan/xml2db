@@ -1,0 +1,9 @@
+Def Store
+AutoDetect
+NameHint stores.bin
+	Name		string:255		*Unique
+	Sell		array:record:store/Department
+	Buy		array:record:store/Department
+	Item		float
+	Salvage		float
+	Recipe		float

@@ -1,0 +1,8 @@
+Def LoyaltyReward
+AutoDetect
+NameHint LoyaltyReward.bin
+	Tier			array:record:loyaltyreward/Tier
+	Level			array:record:loyaltyreward/Level
+	NodeNames		array:record:loyaltyreward/NodeName
+	DefaultInfluenceCap	long64
+	VIPInfluenceCap		long64

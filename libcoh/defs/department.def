@@ -1,0 +1,4 @@
+Def Department
+AutoDetect
+NameHint depts.bin
+	Name		string

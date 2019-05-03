@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+
+import sys, array, re
+from deflib import Field, Def, Def2H
+
+d2h = Def2H('recordtypes', [ 'record.h', '<stdint.h>', '<string>', '<vector>' ], [ 'coh', 'record' ])
+d2h.setfiles(sys.argv[1:])
+d2h.before()
+print('using std::string;')
+print('using std::vector;')
+print('')
+
+typemap = { 'string':'string', 'long':'int32_t', 'ulong':'uint32_t', 'long64':'int64_t', 'ulong64':'uint64_t', 'float':'float', 'bool':'bool' }
+
+for fdef in d2h.deforder:
+	if fdef.simple:
+		rtype = 'SimpleRecord'
+	else:
+		rtype = 'BinRecord'
+	nparts = d2h.NameComponents(fdef.name)
+	for ns in nparts[:-1]:
+		print('namespace ' + ns + ' {')
+	for variant in fdef.variants:
+		print('class ' + d2h.NameComponents(variant)[-1] + ';')
+	print('class ' + nparts[-1] + ': public ' + rtype + ' {')
+	print('	protected:')
+	print('		virtual void ParseFields(Buffer& buf);')
+	print('')
+	print('	public:')
+	print('		typedef ' + nparts[-1] + ' IsRecord;')
+	print('		typedef RecordFactoryT<' + nparts[-1] + '> Factory;')
+	if fdef.variantof:
+		print('		typedef record::' + d2h.NameFilter(fdef.variantof) + ' Family;')
+	else:
+		print('		typedef ' + nparts[-1] + ' Family;')
+	print('		static string StaticTypeName() { return "' + fdef.name + '"; }')
+	if fdef.variantof:
+		print('		static string StaticFamilyName() { return "' + fdef.variantof + '"; }')
+	else:
+		print('		static string StaticFamilyName() { return "' + fdef.name + '"; }')
+	print('		virtual string TypeName() const;')
+	print('		virtual string FamilyName() const;')
+	print('		virtual string NameHint() const;')
+	print('		virtual Family* ToFamily() const;')
+	for variant in fdef.variants:
+		print('		' + nparts[-1] + '& operator=(' + d2h.NameFilter(variant) + ' const&);')
+	print('')
+	for field in fdef.fields:
+		if field.isrecord:
+			typename = 'record::' + d2h.NameFilter(field.type)
+		else:
+			typename = typemap[field.type]
+
+		if field.isarray:
+			typename = 'vector<' + typename + '>'
+
+		print('		' + typename + ' ' + field.name + ';')
+	print('};')
+	for ns in nparts[:-1]:
+		print('}')
+	print('')
+
+d2h.after()

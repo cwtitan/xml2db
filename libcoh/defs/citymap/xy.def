@@ -1,0 +1,4 @@
+Def citymap/XY
+Simple
+	X	float
+	Y	float

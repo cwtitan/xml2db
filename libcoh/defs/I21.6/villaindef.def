@@ -1,0 +1,35 @@
+Def I21_6_VillainDef
+VariantOf VillainDef
+AutoDetect
+	Name			string:255	*Unique
+	Class			string:255
+	Gender			long
+	DisplayDescription	string
+	GroupDescription	string
+	DisplayClassName	string
+	AIConfig		string
+	VillainGroup		long		*Index
+	Power			array:record:misc/PowerRef
+	Entity			array:record:villaindef/Entity
+	Rank			long
+	Ally			string:255
+	Gang			string:255	*Index
+	Exclusion		long
+	NoAutoSpawn		long
+	IgnoreCombatMods	long
+	CopyCreatorMods		long
+	IgnoreReduction		long
+	CanZone			long
+	SpawnLimit		long
+	SuccessRewards		array:string
+	DeathFailureRewards	long
+	IntegrityFailureRewards	long
+	StatusFailureRewards	long
+	RewardScale		float
+	PowerTags		array:string:255	*Index
+	SpecialPetPower		string
+	FileName		string
+	FileAge			long
+	PetCommandStrings	array:record:villaindef/PetCommand
+	PetVisibility		long
+	PetCommandability	long

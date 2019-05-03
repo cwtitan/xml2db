@@ -1,0 +1,135 @@
+Def Behavior
+AutoDetect
+NameHint behaviors.bin
+	ParamBitfield		record:behavior/Bitfield
+	Name			string
+	FileAge			long
+	StartJitter		record:misc/XYZ
+	InitialVelocity		record:misc/XYZ
+	InitialVelocityJitter	record:misc/XYZ
+	InitialVelocityAngle	float
+	Gravity			float
+	Physics			long
+	PhysRadius		float
+	PhysGravity		float
+	PhysRestitution		float
+	PhysSFriction		float
+	PhysDFriction		float
+	PhysKillBelowSpeed	float
+	PhysDensity		float
+	PhysForceRadius		float
+	PhysForcePower		float
+	PhysForcePowerJitter	float
+	PhysForceCentripetal	float
+	PhysForceSpeedScaleMax	float
+	PhysScale		record:misc/XYZ
+	PhysJointDOFs		long		*Flags
+        	EnumVal RotateX		0x00000001
+        	EnumVal RotateY		0x00000002
+        	EnumVal RotateZ		0x00000004
+        	EnumVal TranslateX		0x00000008
+        	EnumVal TranslateY		0x00000010
+        	EnumVal TranslateZ		0x00000020
+	PhysJointAnchor		record:misc/XYZ
+	PhysJointAngLimit	float
+	PhysJointLinLimit	float
+	PhysJointBreakTorque	float
+	PhysJointBreakForce	float
+	PhysJointLinSpring	float
+	PhysJointLinSpringDamp	float
+	PhysJointAngSpring	float
+	PhysJointAngSpringDamp	float
+	PhysJointDrag		float
+	PhysJointCollidesWorld	bool
+	PhysForceType		long
+        	EnumVal None		0x00000000
+        	EnumVal Out		0x00000001
+        	EnumVal In		0x00000002
+        	EnumVal CWSwirl		0x00000006
+        	EnumVal CCWSwirl		0x00000007
+        	EnumVal Up		0x00000003
+        	EnumVal Forward		0x00000004
+        	EnumVal Side		0x00000005
+        	EnumVal Drag		0x00000008
+	PhysDebris		long
+        	EnumVal None		0x00000000
+        	EnumVal Small		0x00000001
+        	EnumVal Large		0x00000002
+        	EnumVal LargeIfHardware		0x00000003
+	Spin			record:misc/PYR
+	SpinJitter		record:misc/PYR
+	FadeInLength		float
+	FadeOutLength		float
+	Shake			float
+	ShakeFallOff		float
+	ShakeRadius		float
+	Blur			float
+	BlurFallOff		float
+	BlurRadius		float
+	Scale			record:misc/XYZ
+	ScaleRate		record:misc/XYZ
+	ScaleTime		record:misc/XYZ
+	EndScale		record:misc/XYZ
+	Stretch			long
+	Drag			float
+	PyrRotate		record:misc/PYR
+	PyrRotateJitter		record:misc/PYR
+	PositionOffset		record:misc/XYZ
+	UseShieldOffset		bool
+	TrackRate		float
+	TrackMethod		long
+	Collides		long
+	LifeSpan		long
+	AnimScale		float
+	Alpha			long
+	PulsePeakTime		float
+	PulseBrightness		float
+	PulseClamp		float
+	SplatFlags		long		*Flags
+        	EnumVal ADDITIVE		0x00000001
+        	EnumVal ADDBASE		0x00000004
+        	EnumVal ROUNDTEXTURE		0x00000008
+        	EnumVal SUBTRACTIVE		0x00000010
+	SplatFalloffType	long		*Flags
+        	EnumVal NONE		0x00000000
+        	EnumVal UP		0x00000001
+        	EnumVal DOWN		0x00000002
+        	EnumVal BOTH		0x00000001
+        	EnumVal SHADOW		0x00000004
+	SplatNormalFade		float
+	SplatFadeCenter		float
+	SplatSetBack		float
+	StAnim			array:record:behavior/StAnim
+	HueShift		float
+	HueShiftJitter		float
+	StartColor		record:misc/RGB
+	BeColor1		record:misc/RGB
+	BeColor2		record:misc/RGB
+	BeColor3		record:misc/RGB
+	BeColor4		record:misc/RGB
+	ByTime1			long
+	ByTime2			long
+	ByTime3			long
+	ByTime4			long
+	PrimaryTint		float
+	PrimaryTint1		float
+	PrimaryTint2		float
+	PrimaryTint3		float
+	PrimaryTint4		float
+	SecondaryTint		float
+	SecondaryTint1		float
+	SecondaryTint2		float
+	SecondaryTint3		float
+	SecondaryTint4		float
+	InheritGroupTint	bool
+	Rgb0			record:misc/RGB
+	Rgb1			record:misc/RGB
+	Rgb2			record:misc/RGB
+	Rgb3			record:misc/RGB
+	Rgb4			record:misc/RGB
+	Rgb0Time		long
+	Rgb1Time		long
+	Rgb2Time		long
+	Rgb3Time		long
+	Rgb4Time		long
+	TintGeom		bool

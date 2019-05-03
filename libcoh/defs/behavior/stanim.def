@@ -1,0 +1,8 @@
+Def behavior/StAnim
+	u001	float
+	u002	float
+	u003	string
+	u004	long		*Flags
+        	EnumVal FRAMESNAP		0x00000001
+        	EnumVal LOCAL_TIMER		0x00000004
+        	EnumVal GLOBAL_TIMER		0x00000008

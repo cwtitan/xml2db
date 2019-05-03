@@ -1,0 +1,5 @@
+Def Command
+AutoDetect
+NameHint command.bin
+	CommandCategory	string
+	Command		array:record:command/Command

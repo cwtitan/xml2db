@@ -1,0 +1,4 @@
+Def misc/Range
+Simple
+	Low		float
+	High		float

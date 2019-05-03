@@ -1,0 +1,5 @@
+Def misc/XYZ
+Simple
+	X	float
+	Y	float
+	Z	float

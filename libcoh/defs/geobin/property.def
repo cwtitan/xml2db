@@ -1,0 +1,4 @@
+Def geobin/Property
+	u034	string
+	u035	string
+	u036	long

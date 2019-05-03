@@ -1,0 +1,38 @@
+Def I19_CClass
+VariantOf CClass
+AutoDetect
+	Name			string	*Unique
+	DisplayName		string
+	DisplayHelp		string
+	AllowedOrigins		array:string
+	SpecialRestrictions	array:string
+	LevelUpRespecs		array:long
+	DisplayShortHelp	string
+	Icon			string
+	PrimaryCategory		string
+	SecondaryCategory	string
+	PowerPoolCategory	string
+	EpicPoolCategory	string
+	SkillCategory		string
+	AttribMin		array:record:cclass/Attrib	*Hidden
+	AttribBase		array:record:cclass/Attrib	*Hidden
+	StrengthMin		array:record:cclass/Attrib	*Hidden
+	ResistanceMin		array:record:cclass/Attrib	*Hidden
+	AtrribDiminStrIn	array:record:cclass/Attrib	*Hidden
+	AtrribDiminStrOut	array:record:cclass/Attrib	*Hidden
+	AtrribDiminCurIn	array:record:cclass/Attrib	*Hidden
+	AtrribDiminCurOut	array:record:cclass/Attrib	*Hidden
+	AtrribDiminResIn	array:record:cclass/Attrib	*Hidden
+	AtrribDiminResOut	array:record:cclass/Attrib	*Hidden
+	AttribMaxTable		array:record:cclass/AttribTable	*Hidden
+	AttribMaxMaxTable	array:record:cclass/AttribTable	*Hidden
+	StrengthMaxTable	array:record:cclass/AttribTable	*Hidden
+	ResistanceMaxTable	array:record:cclass/AttribTable	*Hidden
+	ModTable		array:record:cclass/Mod		*Hidden
+	u001			long
+	u002			long
+	u003			float
+	u004			long
+	u005			long
+	u006			long
+	u007			long

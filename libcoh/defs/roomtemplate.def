@@ -1,0 +1,17 @@
+Def RoomTemplate
+AutoDetect
+NameHint roomtemplates.bin
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Length			long
+	Width			long
+	AllowTeleport		long
+	CostPrestige		long
+	CostInfluence		long
+	UpkeepPrestige		long
+	UpkeepInfluence		long
+	Room			string
+	DetailAllowed		array:record:plot/Detail
+	Requires		array:string

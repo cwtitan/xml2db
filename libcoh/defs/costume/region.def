@@ -1,0 +1,7 @@
+Def costume/Region
+	Name		string:255		*Unique
+	Filename	string
+	DisplayName	string:255		*Index
+	Keys		array:string
+	BoneSet		array:record:costume/BoneSet
+	StoreCategory	string

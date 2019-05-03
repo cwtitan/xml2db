@@ -1,0 +1,8 @@
+Def BaseUpkeep
+AutoDetect
+NameHint baseupkeep.bin
+	FileName		string
+	RentPeriodSeconds	long
+	RentRange		array:record:baseupkeep/RentRange
+	RentDueDateResetPeriod	long
+	LatePeriod		array:record:baseupkeep/LatePeriod

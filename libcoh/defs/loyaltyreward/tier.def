@@ -1,0 +1,7 @@
+Def loyaltyreward/Tier
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	NextTier		string
+	NodesRequiredForNext	long
+	Node			array:record:loyaltyreward/Node

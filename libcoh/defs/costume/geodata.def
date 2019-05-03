@@ -1,0 +1,5 @@
+Def costume/GeoData
+	Name		string:255		*Unique
+	Filename	string
+	ShieldXYZ	record:misc/XYZ
+	ShieldPYR	record:misc/PYR

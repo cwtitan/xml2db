@@ -1,0 +1,5 @@
+Def AttribDescription
+AutoDetect
+NameHint attrib_descriptions.bin
+	AttribCategory		string
+	Attrib			array:record:attribdescription/Attrib

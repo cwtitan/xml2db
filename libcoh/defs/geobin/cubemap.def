@@ -1,0 +1,5 @@
+Def geobin/Cubemap
+	u030	long
+	u031	long
+	u032	float
+	u033	float

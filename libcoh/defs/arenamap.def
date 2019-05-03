@@ -1,0 +1,7 @@
+Def ArenaMap
+AutoDetect
+NameHint arenamaps.bin
+	MapDisplayName		string
+	MapName			string
+	MinPlayers		long
+	MaxPlayers		long

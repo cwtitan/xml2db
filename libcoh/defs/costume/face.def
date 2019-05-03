@@ -1,0 +1,11 @@
+Def costume/Face
+	DisplayName	string:255		*Index
+	Head		record:misc/XYZ
+	Brow		record:misc/XYZ
+	Cheek		record:misc/XYZ
+	Chin		record:misc/XYZ
+	Cranium		record:misc/XYZ
+	Jaw		record:misc/XYZ
+	Nose		record:misc/XYZ
+	COV		long
+	COH		long

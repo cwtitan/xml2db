@@ -1,0 +1,9 @@
+Def minimap/ImageLocation
+	X			float
+	Y			float
+	Z			float
+	XScale			float
+	YScale			float
+	Angle			float
+	Color			long
+	TextBackgroundColor	long

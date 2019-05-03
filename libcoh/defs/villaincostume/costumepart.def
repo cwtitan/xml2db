@@ -1,0 +1,15 @@
+Def villaincostume/CostumePart
+	Name		string
+	SourceFile	string
+	FxName		string
+	Geometry	string
+	Texture1	string
+	Texture2	string
+	DisplayName	string
+	RegionName	string
+	BodySetName	string
+	CostumeNum	long
+	Color1		record:misc/RGB
+	Color2		record:misc/RGB
+	Color3		record:misc/RGB
+	Color4		record:misc/RGB

@@ -1,0 +1,14 @@
+Def Bounds
+AutoDetect
+	name	string
+	u001	record:misc/XYZ
+	u004	record:misc/XYZ
+	u007	float
+	u008	float
+	u009	float
+	u010	float
+	u011	float
+	u012	float
+	u013	long
+	u014	long
+	u015	long

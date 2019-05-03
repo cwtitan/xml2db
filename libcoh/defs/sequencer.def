@@ -1,0 +1,7 @@
+Def Sequencer
+AutoDetect
+NameHint sequencers.bin
+	FileName	string
+	TypeDef		array:record:sequencer/TypeDef
+	Group		array:record:misc/List
+	Move		array:record:sequencer/Move

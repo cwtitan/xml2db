@@ -1,0 +1,7 @@
+Def RoomCategory
+AutoDetect
+NameHint roomcategories.bin
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string

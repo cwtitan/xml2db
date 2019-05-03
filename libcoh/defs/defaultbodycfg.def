@@ -1,0 +1,7 @@
+Def DefaultBodyCfg
+AutoDetect
+NameHint defaultBodyCfg.bin
+	DisplayName		string
+	BodyType		string
+	Build			string
+	Scales			record:defaultbodycfg/Scales

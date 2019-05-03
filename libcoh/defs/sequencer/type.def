@@ -1,0 +1,14 @@
+Def sequencer/Type
+	Name		string
+	Anim		array:record:sequencer/Anim
+	Ragdoll		long
+	PlayFx		array:record:sequencer/Fx
+	Scale		float
+	MoveRate	float
+	SmoothSprint	float
+	PitchAngle	float
+	PitchRate	float
+	PitchStart	float
+	PitchEnd	float
+	ScaleRootBone	long
+	FileName	string

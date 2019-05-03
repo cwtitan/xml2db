@@ -1,0 +1,45 @@
+Def I20_Recipe
+VariantOf Recipe
+AutoDetect
+	SourceFile		string
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string
+	DisplayTabName		string
+	DetailIcon		string
+	Workshop		array:string
+	Salvage			array:record:recipe/Salvage
+	SalvageComponent	array:record:recipe/Salvage
+	PowerComponent		array:record:recipe/Power
+	AdditionalComponents	array:string
+	Detail			string
+	DetailReward		string
+	Reward			string
+	TableReward		string
+	Enhancement		string
+	EnhancementReward	string
+	Recipe			string
+	RecipeReward		string
+	PowerReward		string
+	IncarnateReward		string
+	Requires		array:string
+	Rarity			long
+	Level			long
+	LevelMin		long
+	LevelMax		long
+	CreationCost		array:string
+	SellToVendor		long
+	BuyFromVendor		long
+	NumUses			long
+	Type			long
+	MaxInvAmount		long
+	CreatesEnhancement	long
+	CreatesInspiration	long
+	CreatesSalvage		long
+	CreatesRecipe		long
+	CreatesRequires		array:string
+	ReceiveRequires		array:string
+	DisplayCreatesRequiresFail	string
+	Flags			long

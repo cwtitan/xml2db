@@ -1,0 +1,9 @@
+Def defaultbodycfg/Scales
+	Global		float
+	Bone		float
+	Head		float
+	Chest		float
+	Shoulder	float
+	Waist		float
+	Hip		float
+	Leg		float

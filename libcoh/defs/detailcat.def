@@ -1,0 +1,10 @@
+Def DetailCat
+AutoDetect
+NameHint detailcats.bin
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string
+	EnergyPriority		long
+	ControlPriority		long
+	DetailPointer		long

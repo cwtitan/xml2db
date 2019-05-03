@@ -1,0 +1,107 @@
+Def EntType
+AutoDetect
+NameHint ent_types.bin
+	Type			string
+	FileName		string
+	FileAge			long
+	Sequencer		string
+	SequencerType		string
+	Var			array:record:enttype/Var
+	AnimScale		float
+	Graphics		string
+	LOD1_Dist		float
+	LOD2_Dist		float
+	LOD3_Dist		float
+	VisSphereRadius		float
+	MaxAlpha		long
+	ReverseFadeOutDist	float
+	FadeOutStart		float
+	FadeOutFinish		float
+	TicksToLingerAfterDeath	long
+	TicksToFadeAwayAfterDeath long
+	ShadowType		long
+		EnumVal	None	0x00000000
+		EnumVal Splat	0x00000001
+	ShadowTexture		string
+	ShadowQuality		long
+		EnumVal Low	0x00000001
+		EnumVal Medium	0x00000002
+		EnumVal High	0x00000003
+	ShadowSize		record:misc/XYZ
+	ShadowOffset		record:misc/XYZ
+	Flags			long		*Flags
+		EnumVal NoShallowSplash		0x00000001
+		EnumVal NoDeepSplash		0x00000003
+		EnumVal UseNormalTargeting	0x00000004
+		EnumVal UseDynamicLibraryPiece	0x00000008
+		EnumVal UseCapsuleForRangeFinding	0x00000010
+	LightAsDoorOutside	long
+	RejectContinuingFX	long
+		EnumVal None		0x00000000
+		EnumVal All		0x00000001
+		EnumVal External	0x00000002
+	GeomScale		record:enttype/GeomScale
+	GeomScaleMax		record:misc/XYZ
+	CapsuleSize		record:misc/XYZ
+	CapsuleOffset		record:misc/XYZ
+	BoneCapsule		array:record:enttype/BoneCapsule
+	HasRandomName		long
+	RandomNameFile		string
+	BigMonster		long
+	Fx			array:string
+	OnClickFx		string
+	HealthFx		array:record:enttypes/HealthFx
+	MinimumAmbient		float
+	BoneScaleFat		string
+	BoneScaleSkinny		string
+	RandomBoneScale		long
+	NotSelectable		long
+	CollisionType		long
+        	EnumVal Repulsion 0x00000001
+        	EnumVal BounceUp 0x00000002
+        	EnumVal BounceFacing 0x00000003
+        	EnumVal SteadyUp 0x00000004
+        	EnumVal SteadyFacing 0x00000005
+        	EnumVal LaunchUp 0x00000006
+        	EnumVal LaunchFacing 0x00000007
+        	EnumVal Door 0x00000008
+        	EnumVal LibraryPiece 0x00000009
+        	EnumVal Capsule 0x00000000
+        	EnumVal None 0x0000000A
+        	EnumVal BoneCapsules 0x0000000B
+	Bounciness		float
+	Placement		long
+        	EnumVal DeadOn 0x00000001
+        	EnumVal SetBack 0x00000000
+	Selection		long
+        	EnumVal Capsule 0x00000002
+        	EnumVal LibraryPiece 0x00000003
+        	EnumVal Bones 0x00000001
+        	EnumVal Door 0x00000004
+        	EnumVal BoneCapsules 0x00000005
+	ConstantState		array:string
+	ReticleHeightBias	float
+	ReticleWidthBias	float
+	ReticleBaseBias		float
+	ShoulderScaleSkinny	record:misc/XYZ
+	ShoulderScaleFat	record:misc/XYZ
+	HipScale		record:misc/XYZ
+	NeckScale		record:misc/XYZ
+	LegScaleVec		record:misc/XYZ
+	HeadScaleRange		float
+	ShoulderScaleRange	float
+	ChestScaleRange		float
+	WaistScaleRange		float
+	HipScaleRange		float
+	LegScaleMin		float
+	LegScaleMax		float
+	HeadScaleMin		record:misc/XYZ
+	HeadScaleMax		record:misc/XYZ
+	LegScaleRatio		float
+	SpawnOffsetY		float
+	NoStrafe		long
+	TurnSpeed		float
+	CameraHeight		float
+	Pushable		long
+	FullBodyPortrait	long
+	StaticLighting		long

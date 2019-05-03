@@ -1,0 +1,11 @@
+Def CityMap
+AutoDetect
+NameHint map.bin
+	Name			string
+	Icon			string
+	Location		record:citymap/XY
+	TextLocation		record:citymap/XY
+	Hide			long
+	CoV			long
+	Skin			long
+	TeamArea		long

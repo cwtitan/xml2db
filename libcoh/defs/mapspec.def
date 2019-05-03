@@ -1,0 +1,7 @@
+Def MapSpec
+AutoDetect
+NameHint mapspecs.bin
+	Map			long
+	DisplayName		string
+	RandomDoorType		array:string
+	MissionSet		array:record:mapspec/Set

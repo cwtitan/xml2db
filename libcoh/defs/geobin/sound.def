@@ -1,0 +1,7 @@
+Def geobin/Sound
+	u040	string
+	u041	float
+	u042	float
+	u043	float
+	Flags	long		*Flags
+		EnumVal Exclude 0x00000001

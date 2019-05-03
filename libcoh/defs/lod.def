@@ -1,0 +1,7 @@
+Def LOD
+AutoDetect
+NameHint lods.bin
+	Name		string
+	FileName	string
+	AutoLOD		array:record:lod/AutoLOD
+	ForceAutomatic	long

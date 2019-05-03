@@ -1,0 +1,30 @@
+Def I21_6_Badge
+VariantOf Badge
+AutoDetect
+	SourceFile		string
+	Name			string:64	*Unique
+	Index			long
+	Collection		long
+	Category		long
+	DisplayHint		string
+	DisplayText		string
+	DisplayTitle		string
+	Icon			string
+	DisplayHintVillain	string
+	DisplayTextVillain	string
+	DisplayTitleVillain	string
+	VillainIcon		string
+	Reward		string
+	Visible		long
+	Hinted		long
+	Known		long
+	Requires	array:string
+	Revoke		long
+	DisplayButton	string
+	ButtonReward	long
+	DoNotCount	long
+	DisplayPopup	long
+	AwardText	string
+	AwardTextColor	record:misc/RGBA
+	Contacts	array:string
+	BadgeValues	long

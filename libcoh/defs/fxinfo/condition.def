@@ -1,0 +1,14 @@
+Def fxinfo/Condition
+	On		string
+	Time		float
+	DayStart	float
+	DayEnd		float
+	Dist		float
+	Chance		float
+	DoMany		long
+	Repeat		long
+	RepeatJitter	long
+	TriggerBits	array:record:fxinfo/StringArray
+	Event		array:record:fxinfo/Event
+	Random		long
+	ForceThreshold	float

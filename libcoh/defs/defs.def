@@ -1,0 +1,6 @@
+Def Defs
+AutoDetect
+NameHint defnames.bin
+	ObjectLibrary	array:record:defs/DefName
+	Object		array:record:defs/Def
+

@@ -1,0 +1,21 @@
+Def SpawnDef
+AutoDetect
+NameHint spawndefs.bin
+	FileName		string
+	LogicalName		string
+	EncounterSpawn		string
+	Dialog			string
+	Deprecated		bool
+	SpawnRadius		long
+	VillainMinLevel		long
+	VillainMaxLevel		long
+	MinTeamSize		long
+	MaxTeamSize		long
+	RespawnTimer		long
+	Flags			long		*Flags
+	    EnumVal AllowAddingActors 0x0001
+	    EnumVal IgnoreRadius 0x0002
+	    EnumVal AutoStart 0x0004
+	    EnumVal MissionRespawn 0x0008
+	    EnumVal CloneGroup 0x0010
+	    EnumVal NeighborhoodDefined 0x0011

@@ -1,0 +1,5 @@
+Def sequencer/Fx
+	Name		string
+	u001		long
+	Flags		long	*Flags
+		EnumVal Constant 0x00000001

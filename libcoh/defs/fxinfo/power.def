@@ -1,0 +1,4 @@
+Def fxinfo/Power
+Simple
+	Min		long
+	Max		long

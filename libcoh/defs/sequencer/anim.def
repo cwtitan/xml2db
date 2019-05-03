@@ -1,0 +1,4 @@
+Def sequencer/Anim
+	Name		string
+	First		long
+	Last		long

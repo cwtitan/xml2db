@@ -1,0 +1,7 @@
+Def KeyProfile
+AutoDetect
+NameHint kb.bin
+NameHint kbkorea.bin
+	Name		string
+	DisplayName	string
+	KeyBind		array:record:keyprofile/KeyBind

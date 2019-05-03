@@ -1,0 +1,4 @@
+Def enttype/GeomScale
+	X	float
+	Y	float
+	Z	float

@@ -1,0 +1,27 @@
+Def I20_5_ClientNPC
+VariantOf ClientNPC
+AutoDetect
+	ScriptName		string
+	Model			string
+	Name			string:255		*Unique
+	DisplayName		string:255		*Index
+	SupergroupContact	long
+	AI			string
+	Contact			string
+	RegistersSupergroup	long
+	StoreCount		long
+	Store			array:string:255	*Index
+	CanTailor		long
+	CanRespec		long
+	CanAuction		long
+	Available		long
+	NoHeadshot		long
+	Dialog			array:string
+	ShoutDialog		array:string
+	ShoutFrequency		long
+	ShoutVariation		long
+	AutoRewards		array:string
+	TalksToStrangers	long
+	VisionPhases		array:string
+	WrongAllianceString	string
+	Script			string

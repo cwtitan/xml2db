@@ -1,0 +1,4 @@
+Def geobin/TexSwap
+	u070	string
+	u071	string
+	u072	long

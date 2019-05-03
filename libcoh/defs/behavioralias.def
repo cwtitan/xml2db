@@ -1,0 +1,6 @@
+Def BehaviorAlias
+AutoDetect
+NameHint behavioralias.bin
+	Name		string
+	Behavior	string
+	FileName	string

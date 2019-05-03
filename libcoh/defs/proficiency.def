@@ -1,0 +1,10 @@
+Def Proficiency
+AutoDetect
+NameHint Proficiencies.bin
+	Name			string
+	DisplayName		string
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string
+	Origin			long
+	Rarity			long

@@ -1,0 +1,7 @@
+Def boostset/Bonus
+	DisplayText		string
+	MinBoosts		long
+	MaxBoosts		long
+	Requires		array:string
+	AutoPowers		array:string
+	BonusPower		string

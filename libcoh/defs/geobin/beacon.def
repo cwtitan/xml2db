@@ -1,0 +1,3 @@
+Def geobin/Beacon
+	u080	string
+	u081	float

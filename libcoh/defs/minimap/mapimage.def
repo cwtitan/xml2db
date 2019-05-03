@@ -1,0 +1,6 @@
+Def minimap/MapImage
+	MapImage	string
+	TextNotImage	long
+	DefaultXScale	float
+	DefaultYScale	float
+	ImageLocation	array:record:minimap/ImageLocation

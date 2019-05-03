@@ -1,0 +1,3 @@
+Def mapspec/Set
+	Time		long
+	Map		array:record:mapspec/Map

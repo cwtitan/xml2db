@@ -1,0 +1,9 @@
+exe xml2db : xml2db.cc
+	expat
+	../libcoh//coh
+	..//zlib
+	..//boost_filesystem
+	..//boost_system
+	..//boost_regex ;
+
+lib expat : : <name>expat ;

@@ -1,0 +1,23 @@
+Def I21_ProductCatalog_Old1
+VariantOf ProductCatalog
+AutoDetect
+	Title		string
+	SKU		ulong64
+	Warning		string
+	StoreOrder	long
+	StoreIcon	long
+	StoreBlurb	long
+	StoreThanks	long
+	InventoryType	long
+	InventorySubtype long
+	ProductFlags	long
+	InventoryCount	long
+	InventoryMax	long
+	ExpirationSecs	long
+	Global		long
+	AuthBit		long
+	CostumeToken	long
+	BadgeGrant	long
+	ItemKey		string
+	StartDate	long
+	EndDate		long

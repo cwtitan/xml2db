@@ -1,0 +1,4 @@
+Def dimreturn/Set
+	Default		long
+	Boost		array:long
+	AttribReturn	array:record:dimreturn/Attrib

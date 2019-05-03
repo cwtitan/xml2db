@@ -1,0 +1,46 @@
+Def Recipe # 2165_201112010605_1
+AutoDetect
+NameHint baserecipes.bin
+	SourceFile		string
+	Name			string:255	*Unique
+	DisplayName		string:255	*Index
+	DisplayHelp		string
+	DisplayShortHelp	string
+	Icon			string
+	DisplayTabName		string:255	*Index
+	DetailIcon		string
+	Workshop		array:string		*Index
+	SalvageComponent	array:record:recipe/Salvage
+	PowerComponent		array:record:recipe/Power
+	AdditionalComponents	array:string
+	DetailReward		string:255		*Index
+	TableReward		string:255		*Index
+	EnhancementReward	string:255		*Index
+	RecipeReward		string:255		*Index
+	PowerReward		string:255		*Index
+	IncarnateReward		string:255		*Index
+	Requires		array:string
+	Rarity			long
+	Level			long
+	LevelMin		long
+	LevelMax		long
+	CreationCost		array:string
+	SellToVendor		long
+	BuyFromVendor		long
+	NumUses			long
+	Type			long
+	MaxInvAmount		long
+	CreatesEnhancement	long
+	CreatesInspiration	long
+	CreatesSalvage		long
+	CreatesRecipe		long
+	CreatesRequires		array:string
+	ReceiveRequires		array:string
+	NeverReceiveRequires	array:string
+	u001			long
+	DisplayCreatesRequiresFail	string
+	DisplayReceiveRequiresFail	string
+	DisplayReceive		string
+	DisplayAccountItemPurchase	string
+	DisplayClaimConfirmation	string
+	Flags			long

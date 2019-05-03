@@ -1,0 +1,4 @@
+Def geobin/Ref
+	Name	string
+	Pos	record:misc/XYZ
+	PYR	record:misc/PYR

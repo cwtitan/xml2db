@@ -1,0 +1,7 @@
+Def VillainCostume
+AutoDetect
+NameHint VillainCostume.bin
+	Name		string
+	DisplayName	string
+	Costume		array:record:villaincostume/Costume
+	FileName	string

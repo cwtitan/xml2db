@@ -1,0 +1,4 @@
+Def geobin/Lod
+	Far	float
+	FarFade	float
+	Scale	float

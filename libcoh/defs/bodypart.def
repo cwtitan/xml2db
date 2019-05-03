@@ -1,0 +1,15 @@
+Def BodyPart
+AutoDetect
+NameHint BodyParts.bin
+	Name		string
+	FileName	string
+	BoneCount	long
+	InfluenceCost	long
+	GeoName		string
+	TexName		string
+	BaseName	string
+	BoneCount2	long
+	IsWeapon	long
+	DontClear1	long	# ?
+	DontClear2	long	# ?
+	BodyPart	long

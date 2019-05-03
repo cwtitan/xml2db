@@ -1,0 +1,108 @@
+Def Particle
+AutoDetect
+NameHint particles.bin
+	Name			string
+	FrontOrLocalFacing	long
+	WorldOrLocalPosition	long
+	TimeToFull		float
+	KickStart		long
+	NewPerFrame		array:float
+	Burst			array:long
+	BurbleAmplitude		array:float
+	BurbleType		long
+	BurbleFrequency		float
+	BurbleThreshold		float
+	MoveScale		float
+	EmissionType		long
+	EmissionStartJitter	array:float
+	EmissionRadius		float
+	EmissionHeight		float
+	EmissionLifeSpan	float
+	EmissionLifeSpanJitter	float
+	Spin			long
+	SpinJitter		long
+	OrientationJitter	long
+	Magnetism		float
+	Gravity			float
+	KillOnZero		long
+	Terrain			long
+	InitialVelocity		array:float
+	InitialVelocityJitter	array:float
+	VelocityJitter		record:misc/XYZ
+	TightenUp		float
+	SortBias		float
+	Drag			float
+	Stickiness		float
+	ColorOffset		record:particle/Color
+	ColorOffsetJitter	record:particle/Color
+	Alpha			array:long
+	ColorChangeType		long
+	StartColor		record:misc/RGB
+	BeColor1		record:misc/RGB
+	BeColor2		record:misc/RGB
+	BeColor3		record:misc/RGB
+	BeColor4		record:misc/RGB
+	ByTime1			long
+	ByTime2			long
+	ByTime3			long
+	ByTime4			long
+	PrimaryTint		float
+	PrimaryTint1		float
+	PrimaryTint2		float
+	PrimaryTint3		float
+	PrimaryTint4		float
+	SecondaryTint		float
+	SecondaryTint1		float
+	SecondaryTint2		float
+	SecondaryTint3		float
+	SecondaryTint4		float
+	Rgb0			record:misc/RGB
+	Rgb1			record:misc/RGB
+	Rgb2			record:misc/RGB
+	Rgb3			record:misc/RGB
+	Rgb4			record:misc/RGB
+	Rgb0Time		long
+	Rgb1Time		long
+	Rgb2Time		long
+	Rgb3Time		long
+	Rgb4Time		long
+	FadeInBy		float
+	FadeOutStart		float
+	FadeOutBy		float
+	DieLikeThis		string
+	DeathAgeToZero		long
+	StartSize		array:float
+	StartSizeJitter		float
+	Blend_mode		long
+        	EnumVal Normal 0x00000000
+        	EnumVal Additive 0x00000001
+        	EnumVal Subtractive 0x00000002
+        	EnumVal PremultipliedAlpha 0x00000003
+        	EnumVal Multiply 0x00000004
+        	EnumVal SubtractiveInverse 0x00000005
+	TextureName		string
+	TextureName2		string
+	TexScroll1		record:misc/XYZ
+	TexScroll2		record:misc/XYZ
+	TexScrollJitter1	record:misc/XYZ
+	TexScrollJitter2	record:misc/XYZ
+	AnimFrames1		float
+	AnimFrames2		float
+	AnimPace1		float
+	AnimPace2		float
+	AnimType1		long
+	AnimType2		long
+	EndSize			array:float
+	ExpandRate		float
+	ExpandType		long
+	StreakType		long
+	StreakScale		float
+	StreakOrient		long
+	StreakDirection		long
+	VisRadius		float
+	VisDist			float
+	Flags			long
+        	EnumVal AlwaysDraw 0x00000001
+        	EnumVal FadeImmediatelyOnDeath 0x00000002
+        	EnumVal Ribbon 0x00000004
+        	EnumVal IgnoreFxTint 0x00000008

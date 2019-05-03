@@ -1,0 +1,6 @@
+Def TexWord
+AutoDetect
+NameHint texWords.bin
+	Name		string
+	Size		record:texword/XY
+	Layer		array:record:texword/Layer

@@ -1,0 +1,59 @@
+Def VillainDef
+AutoDetect
+NameHint VillainDef.bin
+	Name			string:255	*Unique
+	Class			string:255
+	Gender			long
+		EnumVal undefined 0x00000000
+		EnumVal neuter 0x00000001
+		EnumVal male 0x00000002
+		EnumVal female 0x00000003
+	DisplayDescription	string
+	GroupDescription	string
+	DisplayClassName	string
+	AIConfig		string
+	VillainGroup		long		*Index
+	Power			array:record:misc/PowerRef
+	Level			array:record:villaindef/Entity
+	Rank			long
+		EnumVal Small 0x00000001
+		EnumVal Minion 0x00000002
+		EnumVal Lieutenant 0x00000003
+		EnumVal Sniper 0x00000004
+		EnumVal Boss 0x00000005
+		EnumVal Elite 0x00000006
+		EnumVal ArchVillain 0x00000007
+		EnumVal ArchVillain2 0x00000008
+		EnumVal BigMonster 0x00000009
+		EnumVal Pet 0x0000000A
+		EnumVal Destructible 0x0000000B
+	Ally			string:255
+	Gang			string:255	*Index
+	Exclusion		long
+		EnumVal CoHOnly 0x00000001
+		EnumVal CoVOnly 0x00000002
+	IgnoreCombatMods	bool
+	CopyCreatorMods		bool
+	IgnoreReduction		bool
+	CanZone			bool
+	SpawnLimit		long
+	SpawnLimitMission	long
+	SuccessRewards		array:string
+	FavoriteWeapon		string
+	DeathFailureRewards	array:string
+	StatusFailureRewards	array:string
+	RewardScale		float
+	PowerTags		array:string:255	*Index
+	SpecialPetPower		string
+	FileName		string
+	FileAge			long
+	PetCommandStrings	array:record:villaindef/PetCommand
+	PetVisibility		long
+	PetCommandability	long
+	BadgeStat		string
+	Flags			long			*Flags
+		EnumVal NoGroupBadgeStat 0x00000001
+		EnumVal NoRankBadgeStat 0x00000004
+		EnumVal NoNameBadgeStat 0x00000008
+		EnumVal NoGenericBadgeStat 0x0000000D
+	ScriptDef		long

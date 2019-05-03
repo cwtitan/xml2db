@@ -1,0 +1,6 @@
+Def geobin/Group
+	Name	string
+	Pos	record:misc/XYZ
+	PYR	record:misc/PYR
+	Flags	long
+		EnumVal DisablePlanarReflections 0x00000001

@@ -1,0 +1,7 @@
+Def costume/Set
+	u001		long
+	Filename	string
+	DisplayName	string:255		*Index
+	Name		string:255		*Unique
+	Keys		array:string
+	ProductList	array:string

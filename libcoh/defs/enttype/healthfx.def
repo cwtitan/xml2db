@@ -1,0 +1,7 @@
+Def enttypes/HealthFx
+	Range			record:misc/Range
+	LibraryPiece		array:string
+	OneShotFx		array:string
+	ContinuingFx		array:string
+	Flags			long		*Flags
+        	EnumVal NoCollision 0x00000001

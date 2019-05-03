@@ -1,0 +1,18 @@
+Def costume/Info
+	DisplayName	string:255		*Index
+	GeoName		string
+	Geo		string
+	Tex1		string
+	Tex2		string
+	Fx		string
+	Product		string
+	Keys		array:string
+	Tag		array:string
+	Flags		array:string
+	DevOnly		long
+	COV		long
+	COH		long
+	COHV		long
+	IsMask		long
+	Level		long
+	Legacy		long
