@@ -62,6 +62,8 @@ map<string, record::Salvage const*> salvageidx;
 Bin<record::BodyPart> bodyparts;
 Bin<record::Costume> costumes;
 
+static ofstream output;
+
 struct CostumeKey {
     CostumeKey(int bt, string g, string t1, string t2, string f):
 	bodytype(bt), geo(g), tex1(t1), tex2(t2), fx(f) {}
@@ -248,19 +250,19 @@ string q(const string& in) {
 }
 
 void writect(string name, int sub) {
-    cout << name << "[" << sub << "].";
+    output << name << "[" << sub << "].";
 }
 
 void writeone(string name, string val) {
-    cout << name << " \"" << q(val) << "\"" << endl;
+    output << name << " \"" << q(val) << "\"" << endl;
 }
 
 void writeone(string name, int val) {
-    cout << name << " " << val << endl;
+    output << name << " " << val << endl;
 }
 
 void writeone(string name, float val) {
-    cout << name << " " << val << endl;
+    output << name << " " << val << endl;
 }
 
 template <class T>
@@ -1544,7 +1546,7 @@ void CharData(void *data, const char *s, int len) {
 
 // Actual conversion
 
-void DoConvert(string fname, int aid, string aname, bool override) {
+void DoConvert(string fname, string txtfname, int aid, string aname, bool override) {
 /*    if (!ValidateFile(fname.c_str())) {
 	if (override)
 	    cerr << "WARNING: ";
@@ -1555,6 +1557,7 @@ void DoConvert(string fname, int aid, string aname, bool override) {
 
     ParseInfo pinfo;
     ifstream input(fname.c_str());
+    output.open(txtfname.c_str());
     char buf[8192];
 
     XML_Parser p = XML_ParserCreate(NULL);
@@ -1584,8 +1587,8 @@ void DoConvert(string fname, int aid, string aname, bool override) {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 5) {
-	cerr << "Usage: xml2db [authid] [authname] [bin.pigg] [xmlfile]" << endl;
+    if (argc < 6) {
+	cerr << "Usage: xml2db [authid] [authname] [bin.pigg] [xmlfile] [txtfile]" << endl;
 	return 1;
     }
 
@@ -1594,15 +1597,16 @@ int main(int argc, char *argv[]) {
     FileName piggfname;
     piggfname.SetPigg(argv[3]);
     string xmlfname = string(argv[4]);
+    string txtfname = string(argv[5]);
     
     bool override = false;
-    if (argc == 6 && iequals(string(argv[5]), "-o"))
+    if (argc == 7 && iequals(string(argv[6]), "-o"))
 	override = true;
 
     try {
 	ReadMessages(piggfname);
 	ReadBinFiles(piggfname);
-	DoConvert(xmlfname, authid, authname, override);
+	DoConvert(xmlfname, txtfname, authid, authname, override);
     } catch (std::exception& e) {
 	cerr << "Error: " << e.what() << endl;
 	return 1;
